@@ -24,7 +24,7 @@
     <preference name="android-minSdkVersion" value="7" />
     <preference name="android-installLocation" value="auto" />
 
-    <preference name="phonegap-version" value="3.7.0" />
+    <preference name="phonegap-version" value="cli-5.2.0" />
     <preference name="android-windowSoftInputMode" value="adjustResize"/>
 
     <!-- <gap:plugin name="org.apache.cordova.battery-status" /> -->
