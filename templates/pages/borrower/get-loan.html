@@ -1,0 +1,84 @@
+<div id="loanSetup" class="ng-scope">
+    <div class="">
+        <div class=" center-block">
+            <h2 class="title">{{'GET_LOAN.TITLE' | translate}}</h2>
+            <h3 ng-show="firstEnterFlag == 1" class="title">{{'GET_LOAN.DESCRIPTION' | translate}}</h3>
+            <h4 ng-show="firstEnterFlag == 1" class="title">*אנא הצטייד מראש במסמכים הבאים: ת.ז, עו"\ש 3 חודשים אחרונים, ותלוש משכורת אחרון.</h4>
+        </div>
+
+        <div style="position:relative" class="">
+            <div class="loan-status" ng-hide="(loanStatus == '' || loanStatus == 'Created') && !borrowerModel.status"></div>
+
+        <form class="form-horizontal" name="loanSetup"  autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"  >
+                <div class="credit-setting-body">
+                    <h2>פרטי ההלוואה</h2>
+                    <div class="form-group">
+                        <label for="LoanAmount"  class="col-lg-3 col-md-4 col-sm-4 col-xs-10 control-label ">{{'GET_LOAN.AMOUNT' | translate}}</label>
+                        <div ng-class="( loanStatus == '' || loanStatus == 'Created' ) && !borrowerModel.status ? '' : 'hide'" class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <slider id="loanSizeSlider" reversed="true"  ng-model="borrowerModel.loanDetails.LoanAmount.value" min="MIN_LOAN_SUM" step="1" max="MAX_LOAN_SUM" value=""></slider>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12 loan-progress">
+                            <input type="text" class="form-control" id="LoanAmount" name="LoanAmount" ng-model="borrowerModel.loanDetails.LoanAmount.value"
+                                  ng-disabled="borrowerModel.status" maxlength="30" placeholder="" autocomplete="off" autocorrect="off" autocapitalize="off"  spellcheck="false" comma-separated-numbers numbers-only-value="{{MAX_LOAN_SUM}}" check-changes required />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="LoanDurationInMonths" class="col-lg-3 col-md-4 col-sm-4 col-xs-10 control-label LoanDurationInMonths">{{'GET_LOAN.DURATION' | translate}}</label>
+                        <div ng-class="( loanStatus == '' || loanStatus == 'Created' ) && !borrowerModel.status ? '' : 'hide'" class="col-lg-4 col-md-4 col-sm-4 col-xs-12 ">
+                            <slider id="loanPeriodSlider" reversed="true" ng-model="borrowerModel.loanDetails.LoanDurationInMonths.value" min="0" step="1" max="84" value="1"></slider>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12 loan-progress">
+                            <input type="text" class="form-control" id="LoanDurationInMonths" name="LoanDurationInMonths" ng-model="borrowerModel.loanDetails.LoanDurationInMonths.value"
+                                   ng-disabled="borrowerModel.status" maxlength="30" placeholder="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" numbers-only-value="84" check-changes required />
+                        </div>
+                    </div>
+
+                    <div class="form-group" ng-class="{'has-error' : !loanSetup.LoanType.$valid && loanSetup.LoanType.$touched}">
+                        <label for="LoanType" class="col-lg-3 col-md-3 col-sm-3 col-xs-6 control-label ">{{'GET_LOAN.LOAN_TYPE' | translate}}</label>
+                        <div class="col-md-4 col-sm-4 col-xs-6">
+                            <select class="form-control" id="LoanType" name="LoanType" ng-model="borrowerModel.loanDetails.LoanType.value"
+                                    ng-disabled="borrowerModel.status" ng-options="option.value for option in borrowerModel.loanDetails.LoanType.options track by option.id"  required>
+                            </select>
+
+                            <div ng-show="!loanSetup.LoanType.$valid && loanSetup.LoanType.$touched" class="tooltip right fade in tooltip-iphone-fixes" style="top: 0; riht: -185px; width: 200px">
+                                <div class="tooltip-arrow"></div>
+                                <div class="tooltip-inner">{{'ERRORS.FIELD_IS_REQUIRED' | translate}}</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>{{'GET_LOAN.PURPOSE' | translate}}</h3>
+                    <div id="LoanReason" class="">
+                        <div class="btn-group" >
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 groupBox">
+                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" ng-repeat="option in borrowerModel.loanDetails.LoanReason.options" >
+                                    <li class="btn" ng-class="(option.id == borrowerModel.loanDetails.LoanReason.value) ? 'active' : ''" active-btn="" ng-click="borrowerModel.loanDetails.LoanReason.value = option.id" id="option-{{option.id}}">{{option.value}}</li>
+                                </div>
+                            </div>
+                        </div>
+                        <input style="visibility:hidden" type="text" ng-model="borrowerModel.loanDetails.LoanReason.value" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="LoanPurpose" class="col-lg-3 col-md-4 col-sm-3 col-xs-5 control-label">{{'GET_LOAN.REASON' | translate}}</label>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-7  login-input-container">
+                            <input type="text" class="form-control" id="LoanPurpose" name="LoanPurpose" ng-model="borrowerModel.loanDetails.LoanPurpose.value"
+                                   ng-disabled="borrowerModel.status" maxlength="30" placeholder="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" check-changes/>
+                        </div>
+                    </div>
+                    <div class="reason-comment">{{'GET_LOAN.REASON_COMMENT' | translate}}</div>
+
+                </div>
+                <div class="ta-center offset-top-50">
+                    <button class="btn btn-primary" type="submit"
+                            ng-disabled="loanSetup.$invalid"
+                            ng-show="(loanStatus == '' || loanStatus == 'Created') && !borrowerModel.status"
+                            ng-click="loanSetupSubmit()">{{'BUTTONS.SAVE_AND_PROCEED' | translate}}</button>
+                    <!--button class="btn btn-default" type="submit"
+                            ng-show="(loanStatus == '')||(loanStatus == 'Created')"
+                            ng-click="loanReset()">{{'GET_LOAN.RESET' | translate}}</button-->
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

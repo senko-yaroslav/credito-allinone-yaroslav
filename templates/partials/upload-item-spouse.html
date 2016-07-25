@@ -1,0 +1,36 @@
+<div class="upload upload-snippet">
+  <span ng-show="item.name == 'UPLOAD.ID'" class="help help-upload glyphicon glyphicon-question-sign" data-name="id" tabindex="1"  tb-tooltip title="{{'HELP_MESSAGES.ID' | translate}}"></span>
+  <form name="uploadFormElement" enctype="multipart/form-data">
+
+    <div class="row">
+      <div class="col-md-6 col-xs-6">
+        <h4>{{item.name | translate}}</h4>
+      </div>
+      <div class="col-md-6 col-xs-6 dynamic-row">
+
+        <div ng-repeat="file in item.values" class="upload-parent-container" ng-class="['uploaded-file-container',
+                    {'selected-file-position': item.status == 'upload'},
+                    {'uploaded-file-position': item.status == 'pending' || item.status == 'approved'}]"
+             ng-hide="item.status == 'init'"><!--Uploaded/Selected file actions-->
+          <div class="file">
+            <span>
+              <span class="progress{{$index}} filename upload-label">{{file.value}}</span>
+            </span>
+            <span class="btn btn-primary btn-xs btn-file">
+                {{'UPLOAD.EDIT' | translate}}<input type="file" class="edit-file" file-model="fileUpload" data="progress{{$index}}" attributeTypeID="{{item.attrId}}" valueType="{{file.valueType}}" isRequired="{{item.isRequired}}">
+            </span>
+            <div class="progress-container">
+              <progress value="0" max="100" class="progress{{$index}}"></progress>
+            </div>
+
+
+          </div>
+          <div class="upload-parent-container{{$index}}"></div>
+        </div>
+        <span class="add-upload-button" ng-click="addFileSpouse(item.attrId, $index, $event)"></span>
+      </div>
+    </div>
+
+  </form><!--end Uploaded/Selected file actions-->
+
+</div>

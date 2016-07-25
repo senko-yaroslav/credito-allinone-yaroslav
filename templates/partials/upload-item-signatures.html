@@ -1,0 +1,35 @@
+<div ng-show="item.alias == currentUpload" class="upload upload-snippet signature">
+  <div ng-show="currentUpload == 'BankPermission'" ><a class="downloadLink" title="Click to download "  ng-click="downloadExistedFile('BankApproval.pdf')">לחץ להורדת מסמך הרשאה לחיוב חשבון</a></div>
+  <form name="uploadFormElement" enctype="multipart/form-data">
+
+    <div ng-show="removed[$index]" class="alert alert-success">{{'UPLOAD.DOCUMENT_REMOVED_SUCCESSFULLY' | translate}}</div>
+    <div class="row">
+      <div class="col-md-12 col-xs-12">
+
+        <h4>
+          <span class="add-upload-button" ng-click="addFile(item.attrId, $index, $event)"></span>
+          {{item.name | translate}}
+        </h4>
+      </div>
+      <div class="col-md-12 col-xs-12 dynamic-row">
+        <div ng-repeat="file in item.values track by file.attributeValueId" class="upload-parent-container" ng-class="['uploaded-file-container',
+                    {'selected-file-position': item.status == 'upload'},
+                    {'uploaded-file-position': item.status == 'pending' || item.status == 'approved'}]"
+             ng-hide="item.status == 'init'"><!--Uploaded/Selected file actions-->
+          <div class="file">
+            <span>
+              <span class="progress{{$index}} filename upload-label">
+                <a title="Click to download {{file.value}}"  ng-click="drawUploadedFile(file.attributeValueId, file.value)">{{file.value}}</a>
+                <a ng-hide="status" ng-click="confirmRemoveFile(file, $parent.$index, $index)" value="{{file.value}}" class="remove-file glyphicon glyphicon-remove" title="Remove {{file.value}}" data-toggle="modal-delete" data-target="#confirm-delete"></a>
+              </span>
+            </span>
+          </div>
+          <div class="upload-parent-container{{$index}}"></div>
+        </div>
+
+      </div>
+    </div>
+
+  </form><!--end Uploaded/Selected file actions-->
+
+</div>

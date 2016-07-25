@@ -1,0 +1,28 @@
+<div class="panel-group" id="FAQAccordion">
+    <div class="panel panel-default" ng-repeat="chapter in FAQModel">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#FAQAccordion" href="#{{chapter.name}}">Chapter name</a>
+            </h4>
+        </div>
+        <div id="{{chapter.name}}" class="panel-collapse collapse " ng-class="{'in' : $index == 0}">
+            <div class="panel-body">
+
+                <div class="panel-group" id="ConfigAccordionTypes_{{c.collateralType}}">
+                    <div class="panel panel-default" ng-repeat="type in c.subCategories">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#ConfigAccordionTypes_{{c.collateralType}}" href="#{{c.collateralType + type.subCategoryName}}">{{'SELECT_OPTIONS.' + type.subCategoryName +'_'+ c.collateralType | translate}}</a>
+                            </h4>
+                        </div>
+                        <div id="{{c.collateralType + type.subCategoryName}}" class="panel-collapse collapse " ng-class="{'in' : $index == 0}">
+                            <div class="panel-body">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

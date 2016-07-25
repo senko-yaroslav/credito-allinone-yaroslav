@@ -1,0 +1,36 @@
+<div id="restore" class="container restore form-horizontal"> <!--restore-->
+    <div class="alert alert-success" ng-show="showSuccessMessage" role="alert">{{'ERRORS.PASSWORD_CHANGED_SUCCESSFULLY' | translate}}</div>
+  <form name="restore">
+
+    <div class="form-group" ng-class="{'has-error' : restore.password.$error.passwordMinSixSymbols}">
+      <label for="password" class="col-sm-4 control-label">{{'REGISTRATION.PASSWORD' | translate}}</label>
+      <div class="col-sm-6">
+        <input type="password" class="form-control" id="password" name="password" maxlength="30" placeholder=""
+               ng-model='reset.password' password-min-six-symbols required />
+        <span class="help-block" ng-show="restore.password.$error.passwordMinSixSymbols">{{'ERRORS.REGISTRATION.PASSWORD' | translate}}</span>
+        <br />
+        <label for="passwordStrength" class="label label-primary">{{'REGISTRATION.PASSWORD_STRENGTH' | translate}}</label>
+        <div id="passwordDescription">{{'ERRORS.REGISTRATION.PASSWORD_NOT_ENTERED' | translate}}</div>
+        <div id="passwordStrength" class="form-control strength0"></div>
+      </div>
+    </div>
+
+    <div class="form-group" ng-class="{'has-error' : restore.retrypass.$error.pwmatch || registration.retrypass.$error.passwordMinSixSymbols}">
+      <label for="retrypass" class="col-sm-4 control-label">{{'REGISTRATION.REPEAT_PASSWORD' | translate}}</label>
+      <div class="col-sm-6">
+        <input type="password" class="form-control" id="retrypass" name="retrypass" maxlength="30" placeholder=""
+               ng-model='reset.retrypass' check-identical="password" password-min-six-symbols required  />
+        <span class="help-block" ng-show="restore.retrypass.$error.pwmatch">{{'ERRORS.REGISTRATION.PASSWORDS_NOT_MATCH' | translate}}</span>
+        <span class="help-block" ng-show="restore.retrypass.$error.passwordMinSixSymbols">{{'ERRORS.REGISTRATION.PASSWORD' | translate}}</span>
+      </div>
+    </div>
+
+
+
+
+    <div class="register-btn"> <!--register button-->
+      <button ng-disabled="restore.$invalid" class="btn btn-primary" type="submit" ng-click="confrimReset()">{{'BUTTONS.RESET' | translate}}</button>
+    </div> <!--end register button-->
+
+  </form>
+</div> <!--end restore-->

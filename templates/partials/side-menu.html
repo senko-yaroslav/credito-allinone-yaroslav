@@ -1,0 +1,39 @@
+<div ng-controller="SideMenuController" class="side-menu">
+
+	<div ng-model="menuData" ng-show="isShowMenu()">
+		<div class="sidebar-nav">
+			<div class="navbar-default " role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<span class="visible-xs navbar-brand">תפריט ראשי</span>
+				</div>
+				<div class="navbar-collapse collapse sidebar-navbar-collapse">
+
+					<ul nav-menu="active" class="accordion" id="accordion">
+						<li class="accordion-group" ng-repeat="item in menuData[currentRole]" ng-hide="(!item.selectedCooperative && currentRole == 'InstInvestorLender') || (currentRole == 'Borrower' && !item.visible) ">
+							<a class="accordion-heading accordion-toggle btn btn-success" ng-class="(item.disabled == 1) ? 'disabled' : '' " data-toggle="{{(item.href=='') ? 'collapse' : ''}}" data-parent="{{(item.href=='') ? '#accordion' : ''}}"  href="{{(item.href=='') ? '#collapse-'+$index : item.href}}">{{item.title}}</a>
+							<ul nav-menu="active" id="collapse-{{$index}}" class="accordion-body collapse">
+								<li ng-repeat="item in item.submenu">
+									<!--a  class="btn btn-default" href="{{item.href}}" >{{item.title}}</a-->
+									<a class="accordion-heading accordion-toggle btn btn-success" data-toggle="{{(item.href=='') ? 'collapse' : ''}}" data-parent="{{(item.href=='') ? '#accordion' : ''}}"  href="{{(item.href=='') ? '#collapse-sub-'+$index : item.href}}">{{item.title}}</a>
+									<ul nav-menu="active" id="collapse-sub-{{$index}}" class="accordion-body collapse">
+										<li ng-repeat="item in item.submenu">
+											<a  class="btn btn-default" href="{{item.href}}" >
+												{{item.title}}
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+
+				</div><!--/.nav-collapse -->
+			</div>
+		</div>
+	</div>
+</div>

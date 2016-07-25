@@ -1,0 +1,37 @@
+<div id="smsMessageVerification" class="container restore form-horizontal"> <!--email confirm-->
+    <div class="alert alert-danger alert-dismissible" role="alert" ng-show="isExists" >
+        <button type="button" class="close" aria-label="Close" ng-click="closeError()"><span
+                aria-hidden="true">&times;</span></button>
+        <div ng-bind-html="serverError | sanitize"></div>
+    </div>
+
+    <div class="alert alert-success alert-dismissible" role="alert" ng-show="alert">
+        <button type="button" class="close" aria-label="Close" ng-click="closeAlert()"><span
+                aria-hidden="true">&times;</span></button>
+        {{alertText}}
+    </div>
+
+    <form name="smsMessageVerification">
+        <h4>תודה רבה שנרשמת בקרדיטו!
+            <br/><br/>
+
+            על מנת להמשיך, אנו זקוקים לאמת את מספר הטלפון הנייד שהכנסת בתהליך הרישום. לצורך כך
+            <br/>
+            שלחנו הודעת SMS עם קוד אימות אותו עליך להכניס כעת.
+            <br/><br/><br/><br/><br/>
+            יש להכניס כאן את הקוד שקיבלת בSMS:
+        </h4>
+
+
+        <div class="form-group text-center"  style="width: 40%; margin: 0 auto">
+            <input type="text" class="form-control" id="smsCode" placeholder="xxxxxx" ng-model="smsCode" numbers-only six-symbols maxlength="6" autocorrect="off" autocapitalize="off" autocomplete="off">
+            <br/>
+        </div>
+
+        <div class="form-group text-center">
+            <button class="btn btn-primary" ng-click="resendSms()">{{'SMS.SEND_ADDITIONAL_SMS' | translate}}</button>
+            <button class="btn btn-primary" ng-click="confirmSms()" ng-disabled="smsCode.length != 6">{{'BUTTONS.OK' | translate}}</button>
+        </div>
+
+    </form>
+</div> <!--end email confirm-->

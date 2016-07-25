@@ -1,0 +1,52 @@
+<div id="containerLoans">
+    <div class="col-md-12 offset-btm-50">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-11 col-xs-11 payment-remained">
+                    <div class="well well-lg text-center lead">
+                        <div>{{'INTEREST_PAYMENTS.PAYMENTS_REMAINED' | translate}}</div>
+                        <div>16</div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-info col-md-11 col-xs-11">
+                <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                            <tr class="">
+                                <td>{{'INTEREST_PAYMENTS.NEXT_PAYMENTS' | translate}} </td>
+                                <th>1,125 ₪</th>
+                            </tr>
+                        <thead>
+                        <tbody>
+                            <tr>
+                                <td>{{'INTEREST_PAYMENTS.FUND_PAYMENT' | translate}}</td>
+                                <th>0 ₪</th>
+                            </tr>
+                            <tr>
+                                <td>{{'INTEREST_PAYMENTS.INTEREST_PAYMENT' | translate}}</td>
+                                <th>1,125 ₪</th>
+                            </tr>
+                            <tr>
+                                <td>{{'INTEREST_PAYMENTS.DATE_OF_PAYMENTS' | translate}}</td>
+                                <th>01.02.2016</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-6">
+            <h2 class="text-center">{{'INTEREST_PAYMENTS.LOAN_FUND' | translate}}</h2>
+            <div>
+                <div id="loan-fund-chart" loan-fund-chart></div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div id="interest-payments-chart" interest-payments-chart></div>
+    </div>
+
+</div>

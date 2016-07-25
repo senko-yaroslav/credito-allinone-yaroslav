@@ -1,0 +1,362 @@
+<div id="user-details" class="container"> <!--user details-->
+
+  <form name="user_details_form" class="form-horizontal">
+
+    <div class="row offset-btm-50">
+
+      <div class="col-lg-6 col-md-10"> <!--Personal Info-->
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">{{'USER_DETAILS.PERSONAL_INFO' | translate}}</h3>
+          </div>
+          <div class="panel-body">
+            <div class="form-group" ng-class="{'has-error' : (!user_details_form.FirstName.$valid && user_details_form.FirstName.$touched) || user_details_form.FirstName.$error.fieldMinTwoSymbol}">
+              <label class="col-sm-5 control-label">{{'USER_DETAILS.FIRST_NAME' | translate}}</label>
+              <div class="col-sm-7">
+                <input type="text" class="form-control" placeholder="John" id="FirstName" ng-model="borrowerModel.userDetails.FirstName.value" name="FirstName"
+                       ng-disabled="borrowerModel.status" field-min-two-symbol check-changes required maxlength="30" />
+                <div ng-show="(!user_details_form.FirstName.$valid  && user_details_form.FirstName.$touched) || user_details_form.FirstName.$error.fieldMinTwoSymbol" class="tooltip tooltip-details right fade in tooltip-iphone-fixes" >
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner">{{'ERRORS.USER_DETAILS.FIRST_NAME' | translate}}</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group" ng-class="{'has-error' : (!user_details_form.LastName.$valid && user_details_form.LastName.$touched) || user_details_form.LastName.$error.fieldMinTwoSymbol}">
+              <label class="col-sm-5 control-label">{{'USER_DETAILS.LAST_NAME' | translate}}</label>
+              <div class="col-sm-7">
+                <input type="text" class="form-control" placeholder="Smitt" id="LastName" ng-model="borrowerModel.userDetails.LastName.value" name="LastName"
+                       ng-disabled="borrowerModel.status" field-min-two-symbol check-changes required maxlength="30" />
+                <div ng-show="(!user_details_form.LastName.$valid  && user_details_form.LastName.$touched) || user_details_form.LastName.$error.fieldMinTwoSymbol" class="tooltip tooltip-details right fade in tooltip-iphone-fixes" >
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner">{{'ERRORS.USER_DETAILS.LAST_NAME' | translate}}</div>
+                </div>
+              </div>
+            </div>
+
+            <!--<div class="form-group"  ng-class="{'has-error' : user_details_form.IDNumber.$error.mustBeFilled}">-->
+              <!--<label class="col-sm-5 control-label">{{'USER_DETAILS.ID_NUMBER' | translate}}</label>-->
+              <!--<div class="col-sm-7">-->
+                <!--<input type="text" class="form-control" name="IDNumber" id="IDNumber" ng-model="borrowerModel.userDetails.IDNumber.value"  must-be-filled check-changes id-number disabled />-->
+                <!--<div ng-show="user_details_form.IDNumber.$error.mustBeFilled" class="tooltip right fade in tooltip-iphone-fixes" style="top: 0; left: 284px; width: 200px">-->
+                  <!--<div class="tooltip-arrow"></div>-->
+                  <!--<div class="tooltip-inner">{{'ERRORS.USER_DETAILS.ID_NUMBER' | translate}}</div>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+
+            <div class="form-group" ng-class="{'has-error' : !user_details_form.MaritalStatus.$valid && user_details_form.MaritalStatus.$touched}">
+              <label class="col-sm-5 control-label">{{'USER_DETAILS.MARTIAL_STATUS' | translate}}</label>
+              <div class="col-sm-7">
+                <select class="form-control" name="MaritalStatus" id="MaritalStatus" ng-model="borrowerModel.userDetails.MaritalStatus.value"
+                        ng-disabled="borrowerModel.status" ng-options="option.value for option in borrowerModel.userDetails.MaritalStatus.options track by option.id " check-changes clone-model required></select>
+                <div ng-show="!user_details_form.MaritalStatus.$valid && user_details_form.MaritalStatus.$touched" class="tooltip tooltip-details right fade in tooltip-iphone-fixes" >
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner">{{'ERRORS.USER_DETAILS.MARTIAL_STATUS' | translate}}</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group" ng-class="{'has-error' : (!user_details_form.PersonsInHouse.$valid && user_details_form.PersonsInHouse.$touched) || user_details_form.PersonsInHouse.$error.mustBeFilled}">
+              <label class="col-sm-5 control-label">{{'USER_DETAILS.PERSONS_INHOUSE' | translate}}</label>
+              <div class="col-sm-7">
+                <input type="text" pattern="[0-9]*" inputmode="numeric" class="form-control" name="PersonsInHouse" ng-model="borrowerModel.userDetails.PersonsInHouse.value" id="PersonsInHouse" placeholder=""
+                       ng-disabled="borrowerModel.status" must-be-filled check-changes clone-model numbers-only-children required maxlength="2" />
+                <div ng-show="(!user_details_form.PersonsInHouse.$valid && user_details_form.PersonsInHouse.$touched) || user_details_form.PersonsInHouse.$error.mustBeFilled" class="tooltip tooltip-details right fade in tooltip-iphone-fixes" >
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner">{{'ERRORS.USER_DETAILS.PERSONS_INHOUSE' | translate}}</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group"  ng-class="{'has-error' : (!user_details_form.ChildrenNumber.$valid && user_details_form.ChildrenNumber.$touched) || user_details_form.ChildrenNumber.$error.mustBeFilled}">
+              <span class="help help-userdetails glyphicon glyphicon-question-sign" data-name="ChildrenNumber" tabindex="1"  tb-tooltip title="{{'HELP_MESSAGES.CHILDREN_NUMBER' | translate}}"></span>
+              <label class="col-sm-5 control-label">{{'USER_DETAILS.CHILDREN_NUMBER' | translate}}</label>
+              <div class="col-sm-7">
+                <input type="text"  pattern="[0-9]*" inputmode="numeric" class="form-control" name="ChildrenNumber" ng-model="borrowerModel.userDetails.ChildrenNumber.value" id="ChildrenNumber" placeholder=""
+                       ng-disabled="borrowerModel.status" check-changes must-be-filled clone-model numbers-only-children required maxlength="2" />
+                <div ng-show="(!user_details_form.ChildrenNumber.$valid  && user_details_form.ChildrenNumber.$touched) || user_details_form.ChildrenNumber.$error.mustBeFilled" class="tooltip tooltip-details right fade in tooltip-iphone-fixes" >
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner">{{'ERRORS.USER_DETAILS.CHILDREN' | translate}}</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group" ng-class="{'has-error': !user_details_form.Gender.$valid && user_details_form.Gender.$touched}">
+              <label class="col-sm-5 control-label">{{'USER_DETAILS.GENDER' | translate}}</label>
+              <div class="col-sm-7">
+                <select class="form-control" name="Gender" id="Gender" ng-model="borrowerModel.userDetails.Gender.value"
+                        ng-disabled="borrowerModel.status" ng-options="option.value for option in borrowerModel.userDetails.Gender.options track by option.id" check-changes required ></select>
+
+                <div ng-if="!user_details_form.Gender.$valid && user_details_form.Gender.$touched" class="tooltip tooltip-details right fade in tooltip-iphone-fixes" >
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner">{{'ERRORS.USER_DETAILS.GENDER' | translate}}</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group" ng-class="{'has-error': !user_details_form.BirthDate.$valid && user_details_form.BirthDate.$touched}">
+              <label class="col-sm-5 control-label">{{'USER_DETAILS.YEAR_OF_BIRTH' | translate}}</label>
+              <div class="col-sm-7">
+                <input type="text" name="BirthDate" id="BirthDate" class="form-control datepicker" ng-model="borrowerModel.userDetails.BirthDate.value"
+                       ng-disabled="borrowerModel.status" check-changes required />
+
+                <div ng-if="!user_details_form.BirthDate.$valid && user_details_form.BirthDate.$touched" class="tooltip tooltip-details right fade in tooltip-iphone-fixes" >
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner">{{'ERRORS.USER_DETAILS.BIRTH_DATE' | translate}}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-10">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">{{'USER_DETAILS.CONECTIVITY_DETAILS' | translate}}</h3>
+          </div>
+          <div class="panel-body">
+            <div class="block-body form-horizontal">
+
+              <div class="form-group"  ng-class="{'has-error' : (!user_details_form.Email.$valid && user_details_form.Email.$touched) || user_details_form.Email.$error.checkEmail}">
+                <label class="col-sm-5 control-label">{{'USER_DETAILS.EMAIL' | translate}}</label>
+                <div class="col-sm-7">
+                  <input type="email" class="form-control" id="Email" ng-model="borrowerModel.userDetails.Email.value" name="Email"
+                         ng-disabled="borrowerModel.status" check-email check-changes required maxlength="100"  />
+                  <div ng-show="(!user_details_form.Email.$valid && user_details_form.Email.$touched) || user_details_form.Email.$error.checkEmail" class="tooltip tooltip-details right fade in tooltip-iphone-fixes" >
+                    <div class="tooltip-arrow"></div>
+                    <div class="tooltip-inner">{{'ERRORS.USER_DETAILS.EMAIL' | translate}}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group" ng-class="{'has-error' : (!user_details_form.PhoneNumber.$valid && user_details_form.PhoneNumber.$touched) || user_details_form.PhoneNumber.$error.phoneNumber}">
+                <span class="help help-userdetails glyphicon glyphicon-question-sign" data-name="PhoneNumber" tabindex="1"  tb-tooltip title="{{'HELP_MESSAGES.PHONE_NUMBER' | translate}}"></span>
+                <label class="col-sm-5 control-label">{{'USER_DETAILS.PHONE' | translate}}</label>
+                <div class="col-sm-7">
+                  <input type="tel" class="form-control" placeholder="" name="PhoneNumber" ng-model="borrowerModel.userDetails.PhoneNumber.value" id="PhoneNumber"
+                         ng-disabled="borrowerModel.status" phone-number check-changes required maxlength="11"  />
+                  <div ng-show="(!user_details_form.PhoneNumber.$valid && user_details_form.PhoneNumber.$touched) || user_details_form.PhoneNumber.$error.phoneNumber" class="tooltip tooltip-details right fade in tooltip-iphone-fixes" >
+                    <div class="tooltip-arrow"></div>
+                    <div class="tooltip-inner">{{'ERRORS.USER_DETAILS.PHONE_NUMBER' | translate}}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group"  ng-class="{'has-error' : (!user_details_form.City.$valid && user_details_form.City.$touched) || user_details_form.City.$error.mustBeFilled }">
+                <label class="col-sm-5 control-label">{{'USER_DETAILS.CITY' | translate}}</label>
+                <div class="col-sm-7">
+                  <input type="text" class="form-control" placeholder="" name="City" ng-model="borrowerModel.userDetails.City.value" id="City"
+                         ng-disabled="borrowerModel.status" must-be-filled clone-model check-changes required maxlength="30"  />
+                  <div ng-show="(!user_details_form.City.$valid && user_details_form.City.$touched) || user_details_form.City.$error.mustBeFilled" class="tooltip tooltip-details right fade in tooltip-iphone-fixes" >
+                    <div class="tooltip-arrow"></div>
+                    <div class="tooltip-inner">{{'ERRORS.USER_DETAILS.CITY' | translate}}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group"  ng-class="{'has-error' : (!user_details_form.Street.$valid && user_details_form.Street.$touched) || user_details_form.Street.$error.mustBeFilled}">
+                <label class="col-sm-5 control-label">{{'USER_DETAILS.STREET' | translate}}</label>
+                <div class="col-sm-7">
+                  <input type="text" class="form-control" placeholder="" name="Street" ng-model="borrowerModel.userDetails.Street.value" id="Street"
+                         ng-disabled="borrowerModel.status" must-be-filled clone-model check-changes required maxlength="30" />
+                  <div ng-show="(!user_details_form.Street.$valid && user_details_form.Street.$touched) || user_details_form.Street.$error.mustBeFilled" class="tooltip tooltip-details right fade in tooltip-iphone-fixes" >
+                    <div class="tooltip-arrow"></div>
+                    <div class="tooltip-inner">{{'ERRORS.USER_DETAILS.STREET' | translate}}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group"  ng-class="{'has-error' : (!user_details_form.BuildingNumber.$valid && user_details_form.BuildingNumber.$touched) || user_details_form.BuildingNumber.$error.mustBeFilled}">
+                <label class="col-sm-5 control-label">{{'USER_DETAILS.BUILDING_NUMBER' | translate}}</label>
+                <div class="col-sm-7">
+                  <input type="text" class="form-control" placeholder="" name="BuildingNumber" ng-model="borrowerModel.userDetails.BuildingNumber.value" id="BuildingNumber"
+                         ng-disabled="borrowerModel.status" must-be-filled clone-model check-changes required maxlength="30"   />
+                  <div ng-show="(!user_details_form.BuildingNumber.$valid && user_details_form.BuildingNumber.$touched) || user_details_form.BuildingNumber.$error.mustBeFilled" class="tooltip tooltip-details right fade in tooltip-iphone-fixes" >
+                    <div class="tooltip-arrow"></div>
+                    <div class="tooltip-inner">{{'ERRORS.USER_DETAILS.BUILDING_NUMBER' | translate}}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group"  ng-class="{'has-error' : (!user_details_form.ApartmentFloor.$valid && user_details_form.ApartmentFloor.$touched) || user_details_form.ApartmentFloor.$error.mustBeFilled}">
+                <span class="help help-userdetails glyphicon glyphicon-question-sign" data-name="ApartmentFloor" tabindex="1"  tb-tooltip title="{{'HELP_MESSAGES.APARTMENT_FLOOR' | translate}}"></span>
+                <label class="col-sm-5 control-label">{{'USER_DETAILS.APARTMENT_FLOOR' | translate}}</label>
+                <div class="col-sm-7">
+                  <input type="text" class="form-control" placeholder="" name="ApartmentFloor" ng-model="borrowerModel.userDetails.ApartmentFloor.value" id="ApartmentFloor"
+                         ng-disabled="borrowerModel.status" numbers-only must-be-filled clone-model check-changes required maxlength="2"   />
+                  <div ng-show="(!user_details_form.ApartmentFloor.$valid && user_details_form.ApartmentFloor.$touched) || user_details_form.ApartmentFloor.$error.mustBeFilled" class="tooltip tooltip-details right fade in tooltip-iphone-fixes" >
+                    <div class="tooltip-arrow"></div>
+                    <div class="tooltip-inner">{{'ERRORS.USER_DETAILS.APARTMENT_FLOOR' | translate}}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group"  ng-class="{'has-error': (!user_details_form.ApartmentNumber.$valid && user_details_form.ApartmentNumber.$touched) || user_details_form.ApartmentNumber.$error.mustBeFilled}">
+                <span class="help help-userdetails glyphicon glyphicon-question-sign" data-name="ApartmentNumber" tabindex="1"  tb-tooltip title="{{'HELP_MESSAGES.APARTMENT_NUMBER' | translate}}"></span>
+                <label class="col-sm-5 control-label">{{'USER_DETAILS.APARTMENT_NUMBER' | translate}}</label>
+                <div class="col-sm-7">
+                  <input type="text" class="form-control" placeholder="" name="ApartmentNumber" ng-model="borrowerModel.userDetails.ApartmentNumber.value" id="ApartmentNumber"
+                         ng-disabled="borrowerModel.status" numbers-only must-be-filled clone-model check-changes required maxlength="30"  />
+                  <div ng-show="(!user_details_form.ApartmentNumber.$valid && user_details_form.ApartmentNumber.$touched) || user_details_form.ApartmentNumber.$error.mustBeFilled" class="tooltip tooltip-details right fade in tooltip-iphone-fixes" >
+                    <div class="tooltip-arrow"></div>
+                    <div class="tooltip-inner">{{'ERRORS.USER_DETAILS.APARTMENT_NUMBER' | translate}}</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </form>
+
+  <form name="spouse_details_form" class="form-horizontal">
+    <!--div class="" ng-hide="spouseTrigger">
+      <div><input ng-model="spouseVal" ng-checked="spouseVal" ng-click="approveWindow=false" ng-true-value="true" ng-false-value="false" type="checkbox">  {{'USER_DETAILS.ADD_SPOUSE' | translate}} </div>
+    </div-->
+
+    <div class="row offset-top-50" ng-show="spouseVal">
+      <div class="alert alert-danger alert-dismissible" role="alert" ng-show="isExists">
+        <button type="button" class="close" aria-label="Close" ng-click="closeError()"><span
+                aria-hidden="true">&times;</span></button>
+        {{userExists}}
+      </div>
+      <div class="col-md-6"> <!--Spouse Info-->
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">{{'USER_DETAILS.SPOUSE_DETAILS' | translate}}</h3>
+          </div>
+          <div class="panel-body">
+            <div class="form-group" ng-class="{'has-error' : (!spouse_details_form.FirstName.$valid && spouse_details_form.FirstName.$touched) || spouse_details_form.FirstName.$error.fieldMinTwoSymbol}">
+              <label class="col-sm-5 control-label">{{'USER_DETAILS.FIRST_NAME' | translate}}</label>
+              <div class="col-sm-7">
+                <input type="text" class="form-control" placeholder="John" id="FirstNameSpouse" name="FirstName"  ng-model="borrowerModel.spouseDetails.FirstName.value"
+                       field-min-two-symbol check-changes required must-be-filled maxlength="30" />
+                <div ng-show="(!spouse_details_form.FirstName.$valid  && spouse_details_form.FirstName.$touched) || spouse_details_form.FirstName.$error.fieldMinTwoSymbol" class="tooltip right fade in tooltip-iphone-fixes" style="top: 0; left: 284px; width: 200px">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner">{{'ERRORS.USER_DETAILS.FIRST_NAME' | translate}}</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group" ng-class="{'has-error' : (!spouse_details_form.LastName.$valid && spouse_details_form.LastName.$touched) || spouse_details_form.LastName.$error.fieldMinTwoSymbol}">
+              <label class="col-sm-5 control-label">{{'USER_DETAILS.LAST_NAME' | translate}}</label>
+              <div class="col-sm-7">
+                <input type="text" class="form-control" placeholder="Smitt" id="LastNameSpouse" name="LastName" ng-model="borrowerModel.spouseDetails.LastName.value"
+                       field-min-two-symbol check-changes required must-be-filled maxlength="30" />
+                <div ng-show="(!spouse_details_form.LastName.$valid  && spouse_details_form.LastName.$touched) || spouse_details_form.LastName.$error.fieldMinTwoSymbol" class="tooltip right fade in tooltip-iphone-fixes" style="top: 0; left: 284px; width: 200px">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner">{{'ERRORS.USER_DETAILS.LAST_NAME' | translate}}</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group" ng-class="{'has-error' : (!spouse_details_form.IDNumber.$valid && spouse_details_form.IDNumber.$touched) || spouse_details_form.IDNumber.$error.nineSymbols}">
+              <label class="col-sm-5 control-label">{{'USER_DETAILS.ID_NUMBER' | translate}}</label>
+              <div class="col-sm-7">
+                <input type="text" class="form-control" name="IDNumber" ng-disabled="spouseTrigger" maxlength="9" id="IDNumberSpouse" ng-model="borrowerModel.spouseDetails.IDNumber.value"
+                       check-changes  must-be-filled id-number id-verification nine-symbols required  />
+                <div ng-show="(!spouse_details_form.LastName.$valid && spouse_details_form.LastName.$touched) || spouse_details_form.LastName.$error.fieldMinTwoSymbol" class="tooltip right fade in tooltip-iphone-fixes" style="top: 0; left: 284px; width: 200px">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner">{{'ERRORS.USER_DETAILS.ID_NUMBER' | translate}}</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group"  ng-class="{'has-error' : (!spouse_details_form.Email.$valid && spouse_details_form.Email.$touched) || spouse_details_form.Email.$error.checkEmail}">
+              <label class="col-sm-5 control-label">{{'USER_DETAILS.EMAIL' | translate}}</label>
+              <div class="col-sm-7">
+                <input type="email" class="form-control" id="EmailSpouse" name="Email" check-email maxlength="100" ng-model="borrowerModel.spouseDetails.Email.value" check-changes required />
+                <div ng-show="(!spouse_details_form.Email.$valid && spouse_details_form.Email.$touched) || spouse_details_form.Email.$error.checkEmail" class="tooltip right fade in tooltip-iphone-fixes" style="top: 0; left: 284px; width: 200px">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner">{{'ERRORS.USER_DETAILS.EMAIL' | translate}}</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group" ng-class="{'has-error' : (!spouse_details_form.PhoneNumber.$valid && spouse_details_form.PhoneNumber.$touched) || spouse_details_form.PhoneNumber.$error.phoneNumber}">
+              <span class="help help-userdetails glyphicon glyphicon-question-sign" data-name="PhoneNumberSpouse" tabindex="1"  tb-tooltip title="{{'HELP_MESSAGES.PHONE_NUMBER' | translate}}"></span>
+              <label class="col-sm-5 control-label">{{'USER_DETAILS.PHONE' | translate}}</label>
+              <div class="col-sm-7">
+                <input type="tel" class="form-control" placeholder="" name="PhoneNumber"  id="PhoneNumberSpouse" ng-model="borrowerModel.spouseDetails.PhoneNumber.value"
+                       phone-number check-changes required maxlength="11"  />
+                <div ng-show="(!spouse_details_form.PhoneNumber.$valid && spouse_details_form.PhoneNumber.$touched) || spouse_details_form.PhoneNumber.$error.phoneNumber" class="tooltip right fade in tooltip-iphone-fixes" style="top: 0; left: 284px; width: 200px">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner">{{'ERRORS.USER_DETAILS.PHONE_NUMBER' | translate}}</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group" ng-class="{'has-error': !spouse_details_form.Gender.$valid && spouse_details_form.Gender.$touched}">
+              <label class="col-sm-5 control-label">{{'USER_DETAILS.GENDER' | translate}}</label>
+              <div class="col-sm-7">
+                <select class="form-control" name="Gender" id="GenderSpouse" ng-model="borrowerModel.spouseDetails.Gender.value"
+                        ng-options="option.value for option in borrowerModel.spouseDetails.Gender.options track by option.id" check-changes required ></select>
+                <div ng-if="!spouse_details_form.Gender.$valid && spouse_details_form.Gender.$touched" class="tooltip right fade in tooltip-iphone-fixes" style="top: 0; left: 284px; width: 200px">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner">{{'ERRORS.USER_DETAILS.GENDER' | translate}}</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group" ng-class="{'has-error': !spouse_details_form.BirthDate.$valid && spouse_details_form.BirthDate.$touched}">
+              <label class="col-sm-5 control-label">{{'USER_DETAILS.YEAR_OF_BIRTH' | translate}}</label>
+              <div class="col-sm-7">
+                <input type="text" name="BirthDate" id="BirthDateSpouse" class="form-control datepicker"  ng-model="borrowerModel.spouseDetails.BirthDate.value" check-changes required />
+
+                <div ng-if="!spouse_details_form.BirthDate.$valid && spouse_details_form.BirthDate.$touched" class="tooltip right fade in tooltip-iphone-fixes" style="top: 0; left: 284px; width: 200px">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner">{{'ERRORS.USER_DETAILS.BIRTH_DATE' | translate}}</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <!--div ng-hide="spouseTrigger || approveWindow" class="pop-up-window">
+        <div class="pop-up-background" ng-hide=""></div>
+        <div class="approveSpouseWindow personal-page">
+          <div class="approveSpouse-title">
+            אם ברצונך לאפשר לבן/בת הזוג צפייה בחשבון המשותף במקביל אליך, יש להזין את כתובת המייל של בן/בת הזוג והודעת אישור תישלח לכתובת זו לאישור ולהנפקת סיסמא אישית.
+  שלך בלבד.
+          </div>
+          <div class="form-group offset-top-50"  ng-class="{'has-error' : (!spouse_details_form.Email.$valid && spouse_details_form.Email.$touched) || spouse_details_form.Email.$error.checkEmail}">
+            <label class="col-sm-4 control-label">{{'USER_DETAILS.EMAIL' | translate}}</label>
+            <div class="col-sm-7">
+              <input type="email" class="form-control" id="EmailSpouseApprove" name="Email" check-email check-changes  maxlength="100" ng-model="borrowerModel.spouseDetails.Email.value" />
+              <div ng-show="(!spouse_details_form.Email.$valid && spouse_details_form.Email.$touched) || spouse_details_form.Email.$error.checkEmail" class="tooltip right fade in tooltip-iphone-fixes" style="top: 0; left: 284px; width: 200px">
+                <div class="tooltip-arrow"></div>
+                <div class="tooltip-inner">{{'ERRORS.USER_DETAILS.EMAIL' | translate}}</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ta-center offset-top-50">
+            <div class="btn btn-icon btn-save-next btn-primary" ng-click="approveWindow=true">{{'BUTTONS.SEND_MAIL' | translate}}</div>
+            <div class="btn btn-icon btn-save-next btn-primary" ng-click="spouseVal=false">{{'BUTTONS.DONOT_SEND_MAIL' | translate}}</div>
+          </div>
+        </div>
+      </div-->
+
+    </div>
+  </form>
+
+
+
+    <div class="ta-center col-md-12">
+      <a class="btn btn-primary ng-binding" href="#/get-loan">הקודם</a>
+      <button class="btn btn-icon btn-save-next btn-primary" ng-disabled="user_details_form.$invalid || (spouseVal && spouse_details_form.$invalid)"
+             ng-hide="borrowerModel.status" type="submit" ng-click="userDetailsSave()">{{'BUTTONS.SAVE_AND_PROCEED' | translate}}</button>
+    </div>
+
+
+
+</div>

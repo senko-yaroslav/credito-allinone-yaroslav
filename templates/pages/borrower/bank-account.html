@@ -1,0 +1,92 @@
+<div id="bankAccount" class=" container ng-scope">
+    <form class="" name="bankAccountForm" ng-submit="onSubmit()" novalidate>
+        <div class="row offset-btm-50">
+
+            <div class="col-md-9 col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">{{'STEP.BANK_ACCOUNT' | translate}}</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="block-body form-horizontal">
+                            <div class="form-group" ng-class="{'has-error' : !bankAccountForm.BankName.$valid && bankAccountForm.BankName.$touched}">
+                                <label class="col-sm-4 control-label" >{{'USER_DETAILS.BANK_NAME' | translate}}</label>
+                                <div class="col-sm-8">
+                                    <select class="form-control" name="BankName" ng-model="borrowerModel.bankAccount.BankNameList.value"
+                                            ng-disabled="borrowerModel.status" ng-options="option.value for option in borrowerModel.bankAccount.BankNameList.options track by option.id" required>
+                                    </select>
+
+                                    <div ng-show="!bankAccountForm.BankName.$valid && bankAccountForm.BankName.$touched" class="tooltip tooltip-bank right fade in tooltip-iphone-fixes" >
+                                        <div class="tooltip-arrow"></div>
+                                        <div class="tooltip-inner">{{'ERRORS.FIELD_IS_REQUIRED' | translate}}</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group" ng-class="{'has-error': !bankAccountForm.BankBranchName.$valid && bankAccountForm.BankBranchName.$touched}">
+                                <label class="col-sm-4 control-label" for="branchInput">{{'USER_DETAILS.BRUNCH' | translate}}</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="branchInput" name="BankBranchName"
+                                           ng-disabled="borrowerModel.status" required check-changes must-be-filled ng-model="borrowerModel.bankAccount.BankBranchName.value" placeholder="{{'USER_DETAILS.BRUNCH' | translate}}">
+
+                                    <div ng-if="!bankAccountForm.BankBranchName.$valid && bankAccountForm.BankBranchName.$touched" class="tooltip tooltip-bank right fade in tooltip-iphone-fixes" >
+                                        <div class="tooltip-arrow"></div>
+                                        <div class="tooltip-inner">{{'ERRORS.FIELD_IS_REQUIRED' | translate}}</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group" ng-class="{'has-error': !bankAccountForm.BankAccountNumber.$valid && bankAccountForm.BankAccountNumber.$touched}">
+                                <label class="col-sm-4 control-label" for="accountInput">{{'USER_DETAILS.ACOOUNT' | translate}}</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="accountInput" name="BankAccountNumber"
+                                           ng-disabled="borrowerModel.status"  required check-changes must-be-filled ng-model="borrowerModel.bankAccount.BankAccountNumber.value" placeholder="{{'USER_DETAILS.ACOOUNT' | translate}}">
+
+                                    <div ng-if="!bankAccountForm.BankAccountNumber.$valid && bankAccountForm.BankAccountNumber.$touched" class="tooltip tooltip-bank right fade in tooltip-iphone-fixes" >
+                                        <div class="tooltip-arrow"></div>
+                                        <div class="tooltip-inner">{{'ERRORS.FIELD_IS_REQUIRED' | translate}}</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group" ng-class="{'has-error' : !bankAccountForm.CreditCardOwnerShip.$valid && bankAccountForm.CreditCardOwnerShip.$touched}">
+                                <label class="col-sm-4 control-label">{{'USER_DETAILS.CREDIT_CARD_OWNERSHIP' | translate}}</label>
+                                <div class="col-sm-8">
+                                    <select class="form-control" name="CreditCardOwnerShip" ng-model="borrowerModel.bankAccount.CreditCardOwnership.value"
+                                            ng-disabled="borrowerModel.status"  ng-options="option.value for option in borrowerModel.bankAccount.CreditCardOwnership.options track by option.id"  required>
+                                    </select>
+
+                                    <div ng-show="!bankAccountForm.CreditCardOwnerShip.$valid && bankAccountForm.CreditCardOwnerShip.$touched" class="tooltip tooltip-bank right fade in tooltip-iphone-fixes" >
+                                        <div class="tooltip-arrow"></div>
+                                        <div class="tooltip-inner">{{'ERRORS.FIELD_IS_REQUIRED' | translate}}</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group" ng-class="{'has-error': !bankAccountForm.YearsInAccount.$valid && bankAccountForm.YearsInAccount.$touched}">
+                                <label class="col-sm-4 control-label" for="branchInput">{{'USER_DETAILS.YEARS_IN_ACCOUNT' | translate}}</label>
+                                <div class="col-sm-8">
+                                    <!--input type="text" class="form-control" id="YearsInAccount" name="YearsInAccount" required check-changes must-be-filled numbers-only maxlength="2" ng-model="borrowerModel.bankAccount.YearsInAccount.value" placeholder="{{'USER_DETAILS.YEARS_IN_ACCOUNT' | translate}}"-->
+                                    <select class="form-control" name="YearsInAccount" id="YearsInAccount" ng-options="o for o in yearsLimit"
+                                            ng-disabled="borrowerModel.status"  ng-model="borrowerModel.bankAccount.YearsInAccount.value" check-changes required>
+                                    </select>
+                                    <div ng-if="!bankAccountForm.YearsInAccount.$valid && bankAccountForm.YearsInAccount.$touched" class="tooltip tooltip-bank right fade in tooltip-iphone-fixes">
+                                        <div class="tooltip-arrow"></div>
+                                        <div class="tooltip-inner">{{'ERRORS.FIELD_IS_REQUIRED' | translate}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ta-center  col-md-12">
+            <div class="">
+                <a class="btn btn-primary ng-binding" href="#/properties-and-liabilities">הקודם</a>
+                <button type="submit" class="btn btn-primary" ng-disabled="bankAccountForm.$invalid"  ng-hide="borrowerModel.status">{{'BUTTONS.SAVE_AND_PROCEED' | translate}}</button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,39 @@
+/* Add here all your CSS customizations */
+
+#header ul.social-icons li{box-shadow:none;}
+#header { opacity: 0.85;}
+#header.narrow {min-height: 75px;  margin-top: -10px;}
+
+.featured-boxes-flat .featured-box .box-content {background: #F2F2F2;padding: 0 20px;}
+html.boxed body {background-color: rgb(216, 216, 216);background-image: none}
+#login-menu {width: 256px;padding-top:25px}
+
+#footer.narrow .nav > li > a {
+  padding: 10px 10px;
+}
+
+#footer .footer-copyright {
+  margin-top: 40px;
+  padding: 20px 0px 0px 0px;
+}
+
+body {  font-family: gisha;}
+
+.home .feature-box .feature-box-icon .fa{font-size: 24px !important}
+.home .feature-box .feature-box-info h4 {line-height: 40px}
+
+#footer.light h1, #footer.light h2, #footer.light h3, #footer.light h4, #footer.light a {
+  color: #000000 !important;
+}
+
+.lead {
+  font-size: 20px;
+}
+
+@media (max-width: 991px) {
+.navbar-collapse {
+  margin-top: 7px;
+}
+
+
+img {max-width: 100%;}}

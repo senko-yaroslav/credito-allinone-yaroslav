@@ -1,0 +1,132 @@
+<div ng-app="" class="container-fluid offset-btm-50">
+    <div><h3>{{'UPLOAD.UPLOAD_DOCUMENTS' | translate}}</h3></div>
+    <div class="col-md-8 col-xs-12"> <!--left side-->
+
+        <div class="upload-form"> <!--upload form-->
+
+            <div ng-repeat="item in uploadForm">
+                <upload-item item="item" file-model="fileModel" />
+            </div>
+
+            <div class="alert alert-success" role="alert"  ng-show="commentsSaved">
+                <div class="alert-link center-block" style="text-align: center;">
+                    <div>{{'UPLOAD.SAVE' | translate}}</div>
+                </div>
+            </div>
+            <div class="upload upload-snippet comments">
+                <h4>{{'UPLOAD.COMMENTS' | translate}}</h4>
+                <textarea ng-disabled="status" class="form-control" name="" cols="40" rows="5" id="comments" ng-model="OtherInfo.values[0].value" valueType="{{OtherInfo.valueType}}" attributeTypeID="{{OtherInfo.attributeTypeID}}" isRequired="{{OtherInfo.isRequired}}"></textarea>
+            </div>
+
+
+        </div> <!--end upload form-->
+    </div> <!--end left side-->
+
+    <div class="col-md-4 col-xs-12 left-border"> <!--right side-->
+
+       <div class="upload-message" ng-show="states.isCalculateState == 'active'">
+         <h4>{{'UPLOAD.COMPLETE_MESSAGE' | translate}}</h4>
+       </div>
+    </div> <!--end right side-->
+</div>
+
+<!--div ng-controller="UploadSpouseController" ng-show="spouseTrigger" class="container-fluid offset-btm-50">
+    <div><h3>{{'UPLOAD.UPLOAD_DOCUMENTS_SPOUSE' | translate}}</h3></div>
+    <div class="col-md-8 col-xs-12">
+        <div class="upload-form">
+            <div ng-repeat="item in uploadFormSpouse">
+                <upload-item-spouse item="item" file-model="fileModel" />
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-md-4 col-xs-12 left-border">
+        <div class="upload-message" ng-show="states.isCalculateState == 'active'">
+            <h4>{{'UPLOAD.COMPLETE_MESSAGE' | translate}}</h4>
+        </div>
+    </div>
+</div-->
+
+<div class="row" ng-show="spouseTrigger">
+    <div class="col-md-8"></div>
+    <div class="col-md-4">
+        <div class="approveSpouseWindow uplaod-window" ng-model="approveWindowShow" ng-show="approveWindowShow" >
+            <div class="approveSpouse-title">
+                שים לב: מרגע הלחיצה על אישור 
+                הינך מאשר כי הפרטים שמילאת
+                נכונים וסופיים וכי לא תהיה
+                באפשרותך לערוך שינויים בפרטים
+                שמילאת. אם ברצונך לבצע שינוי
+                נוסף לאחר שלחצת אישור - אנא 
+				פנה למוקד התמיכה באמצעות
+				המייל
+            </div>
+
+            <div class="ta-center offset-top-50">
+                <div class="btn btn-icon btn-save-next btn-primary" ng-click="complete()">{{'BUTTONS.OK' | translate}}</div>
+                <div class="btn btn-icon btn-save-next btn-primary" ng-click="approveWindowShow=false">{{'BUTTONS.CANCEL' | translate}}</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="ta-center col-md-8 col-xs-12" ng-show="role == 'Borrower'">
+        <a class="btn btn-primary" href="#/bank-account">{{'BUTTONS.BACK' | translate}}</a>
+        <a class="btn btn-primary" href="" ng-hide="status" ng-click="saveComments()">{{'UPLOAD.SAVE' | translate}}</a>
+        <div class="btn btn-primary" ng-show="spouseTrigger" ng-click="approveWindowShow=true">{{'BUTTONS.COMPLETE' | translate}}</div>
+        <div class="btn btn-primary" ng-hide="spouseTrigger || status" ng-click="complete()">{{'BUTTONS.COMPLETE' | translate}}</div>
+    </div>
+</div>
+
+
+<div class="ta-center" ng-show="role == 'Lender' || role == 'CompanyLender'">
+    <a class="btn btn-primary" href="#/bank-account">{{'BUTTONS.BACK' | translate}}</a>
+    <a class="btn btn-primary" href="#/lender/current-picture">{{'BUTTONS.COMPLETE' | translate}}</a>
+</div>
+
+
+<div id="finishModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <h4>שים לב,<br/>
+                    מהרגע שתלחץ על אישור הנך מאשר כי הפרטים שמילאת נכונים וסופיים וכי לא תהיה באפשרותך לערוך שינויים <br/>
+                    בפרטים שמילאת, אלא באמצעות פניה באימייל.
+                </h4>
+            </div>
+            <div class="modal-footer">
+                <div class="btn btn-primary" data-dismiss="modal" >{{'BUTTONS.CANCEL' | translate}}</div>
+                <div class="btn btn-primary" data-dismiss="modal" ng-click="completeData()" >{{'BUTTONS.OK' | translate}}</div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<div id="confirm-delete" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">אישור מחיקה</h4>
+            </div>
+
+            <div class="modal-body">
+                <p>את/ה עומד/ת להסיר את המסמך. לא ניתן יהיה לשחזר מסמך זה לאחר מכן.</p>
+                <p><b>האם ברצונך להמשיך?</b></p>
+                <p class="debug-url"></p>
+            </div>
+
+            <div class="modal-footer">
+                <div class="btn btn-default" data-dismiss="modal" >{{'BUTTONS.CANCEL' | translate}}</div>
+                <div class="btn btn-danger" data-dismiss="modal" ng-click="removeFile()" >{{'BUTTONS.OK' | translate}}</div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

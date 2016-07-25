@@ -1,0 +1,50 @@
+<div id="restore" class="container change form-horizontal"> <!--restore-->
+  <div class="alert alert-success" ng-show="showSuccessMessage" role="alert">{{'ERRORS.PASSWORD_CHANGED_SUCCESSFULLY' | translate}}</div>
+  <h2>{{'REGISTRATION.CHANGE_PASSWORD' | translate}}:</h2>
+  <form name="change">
+
+    <p class="alert alert-danger" ng-show="change.oldPassword.$error.incorrect">{{'ERRORS.OLD_PASSWORD_INCORRECT' | translate}}</p>
+    <p class="alert alert-success" ng-show="change.oldPassword.$error.correct">{{'ERRORS.PASSWORD_CHANGED_SUCCESSFULLY' | translate}}</p>
+
+    <div class="form-group" ng-class="{'has-error' : change.oldPassword.$error.pwmatch || change.oldPassword.$error.passwordMinSixSymbols}">
+      <label for="oldPassword" class="col-sm-4 control-label">{{'REGISTRATION.OLD_PASSWORD' | translate}}</label>
+      <div class="col-sm-6">
+        <input type="password" class="form-control" id="oldPassword" name="oldPassword" maxlength="30"
+               placeholder="{{'REGISTRATION.OLD_PASSWORD' | translate}}" ng-model='oldPassword' password-min-six-symbols required  />
+        <span class="help-block" ng-show="change.oldPassword.$error.passwordMinSixSymbols">{{'ERRORS.REGISTRATION.PASSWORD' | translate}}</span>
+      </div>
+    </div>
+
+    <div class="form-group" ng-class="{'has-error' : change.password.$error.passwordMinSixSymbols}">
+      <label for="password" class="col-sm-4 control-label">{{'REGISTRATION.PASSWORD' | translate}}</label>
+      <div class="col-sm-6">
+        <input type="password" class="form-control" id="password" name="password" maxlength="30"
+               placeholder="{{'REGISTRATION.PASSWORD' | translate}}" ng-model='password' password-min-six-symbols required />
+        <span class="help-block" ng-show="change.password.$error.passwordMinSixSymbols">{{'ERRORS.REGISTRATION.PASSWORD' | translate}}</span>
+        <br />
+        <label for="passwordStrength" class="label label-primary">{{'REGISTRATION.PASSWORD_STRENGTH' | translate}}</label>
+        <div id="passwordDescription"></div>
+        <div id="passwordStrength" class="form-control strength0"></div>
+      </div>
+    </div>
+
+    <div class="form-group" ng-class="{'has-error' : change.retrypass.$error.pwmatch || change.retrypass.$error.passwordMinSixSymbols}">
+      <label for="retrypass" class="col-sm-4 control-label">{{'REGISTRATION.REPEAT_PASSWORD' | translate}}</label>
+      <div class="col-sm-6">
+        <input type="password" class="form-control" id="retrypass" name="retrypass" maxlength="30"
+               placeholder="{{'REGISTRATION.REPEAT_PASSWORD' | translate}}" ng-model='retrypass' check-identical="password" password-min-six-symbols required  />
+        <span class="help-block" ng-show="change.retrypass.$error.pwmatch">{{'ERRORS.REGISTRATION.PASSWORDS_NOT_MATCH' | translate}}</span>
+        <span class="help-block" ng-show="change.retrypass.$error.passwordMinSixSymbols">{{'ERRORS.REGISTRATION.PASSWORD' | translate}}</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-sm-4 "></label>
+      <div class="col-sm-6">
+        <button class="btn btn-primary" type="submit" ng-click="changePassword()" ng-disabled="!change.$valid">{{'BUTTONS.CHANGE' | translate}}</button>
+        <back-button ng-click="historyBack()" >{{'BUTTONS.BACK' | translate}}</back-button>
+      </div>
+    </div>
+
+  </form>
+</div> <!--end restore-->

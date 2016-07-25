@@ -1,0 +1,28 @@
+<div id="restore" class="container restore form-horizontal"> <!--restore-->
+  <form name="restore">
+
+    <div class="form-group" ng-class="{'has-error' : restore.IsraelId.$error.idVerification}">
+      <label for="Id">{{'ERRORS.RESET_PASSWORD' | translate}}</label>
+      <div class="inner-addon right-addon w55">
+        <input type="text" class="form-control" id="id" ng-model="reset.id" name="IsraelId" required numbers-only id-verification />
+          <span class="help-block" ng-show="restore.IsraelId.$error.idVerification">{{'ERRORS.USERNAME_OR_ID_NOT_FOUND' | translate}}</span>
+      </div>
+    </div>
+
+    <div class="form-group" ng-class="{'has-error' : restore.companyId.$error.idVerification}" ng-show="isCompany">
+      <label>Company ID</label>
+      <div class="inner-addon right-addon w55">
+        <input type="text" class="form-control" id="companyId" ng-model="reset.companyId" name="companyId" ng-required="isCompany" numbers-only id-verification />
+          <span class="help-block" ng-show="restore.companyId.$error.idVerification">Company ID not valid</span>
+      </div>
+    </div>
+
+    <div class="register-btn"> <!--register button-->
+      <button class="btn btn-primary" type="submit" ng-click="resetPassword()" ng-disabled="!restore.$valid">{{'BUTTONS.RESET' | translate}}</button>
+      <back-button ng-click="historyBack()">{{'BUTTONS.BACK' | translate}}</back-button>
+    </div> <!--end register button-->
+
+  </form>
+</div> <!--end restore-->
+
+

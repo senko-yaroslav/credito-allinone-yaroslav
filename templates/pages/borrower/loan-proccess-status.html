@@ -1,0 +1,47 @@
+<div id="">
+    <div class="offset-btm-50">
+        <div class="row-eq-height borrower-status offset-btm-50">
+            <div class="col-md-4 col-xs-4">
+                <div class="well well-lg text-center lead">
+                    <div class="">סך הכל קרן</div>
+                    <div class="" style="direction:rtl;"><b> {{statusModel.header.fundRemaining | number : fractionSize}}</b><b> ₪</b></div>
+                </div>
+            </div>
+            <div class="col-md-4 col-xs-4">
+                <div class="well well-lg text-center lead center">
+                    <div class="ng-binding">סה"כ תשלום קרוב</div>
+                    <div class="ng-binding" style="direction:rtl;"><b>{{statusModel.header.nearestPayment | number : fractionSize}}</b><b> ₪</b></div>
+                </div>
+            </div>
+            <div class="col-md-4 col-xs-4">
+                <div class="well well-lg text-center lead">
+                    <div class="ng-binding">מועד תשלום קרוב</div>
+                    <div class="ng-binding"><b>{{statusModel.header.nearestPaymentDate | date:'dd-MM-yyyy'}}</b></div>
+                </div>
+            </div>
+        </div>
+        <div class="row-eq-height">
+            <div class="col-lg-8 col-md-4">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h2 class="text-center">{{'INTEREST_PAYMENTS.PAYMENT_FORCAST' | translate}}</h2>
+                    </div>
+                    <div class="panel-body">
+                        <div class="" id="payments-forcast-chart" payments-forcast-chart></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 loan-summary">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h2 class="text-center">{{'INTEREST_PAYMENTS.LOAN_FUND' | translate}}</h2>
+                    </div>
+                    <div class="panel-body">
+                        <div id="loan-fund-chart" loan-fund-chart></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
