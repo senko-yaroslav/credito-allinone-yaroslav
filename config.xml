@@ -71,12 +71,4 @@
         <icon src="res/icon/android/icon-hdpi.png" density="hdpi" />
         <icon src="res/icon/android/icon-xhdpi.png" density="xhdpi" />
     </platform>
-
-    <feature name="Device">
-        <param name="android-package" value="7659SEXP46.il.co.coupit" />
-    </feature>
-
-    <!-- Social sharing plugin https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin -->
-    <gap:plugin name="nl.x-services.plugins.socialsharing" />
-    <!-- <gap:plugin name="com.cesidiodibenedetto.filechooser" /> -->
 </widget>
