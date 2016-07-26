@@ -30,6 +30,9 @@ if(typeof LS.roles == 'undefined') {
 }
 
 var Credito = angular.module('App', [
+  'ionic',
+  'ngCordova',
+  'ngLodash',
   'ngRoute',
   'angularLoad',
   'restangular',
