@@ -2,491 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4dda0f9-5883-4f50-844f-54406a5f3297" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/Highcharts/export-csv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/CHANGES.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/LICENSE.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/adapters/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/build-config.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/ckeditor.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/config.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/contents.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/af.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/ar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/bg.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/bn.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/bs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/ca.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/cs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/cy.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/da.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/de-ch.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/de.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/el.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/en-au.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/en-ca.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/en-gb.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/en.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/eo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/es.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/et.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/eu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/fa.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/fi.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/fo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/fr-ca.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/fr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/gl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/gu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/he.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/hi.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/hr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/hu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/id.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/is.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/it.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/ja.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/ka.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/km.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/ko.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/ku.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/lt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/lv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/mk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/mn.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/ms.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/nb.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/nl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/no.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/pl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/pt-br.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/pt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/ro.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/ru.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/si.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/sk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/sl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/sq.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/sr-latn.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/sr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/sv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/th.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/tr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/tt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/ug.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/uk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/vi.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/zh-cn.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/lang/zh.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/_translationstatus.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/af.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/ar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/bg.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/ca.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/cs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/cy.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/da.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/de-ch.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/de.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/el.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/en-gb.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/en.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/eo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/es.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/et.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/eu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/fa.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/fi.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/fo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/fr-ca.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/fr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/gl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/gu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/he.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/hi.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/hr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/hu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/id.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/it.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/ja.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/km.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/ko.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/ku.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/lt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/lv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/mk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/mn.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/nb.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/nl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/no.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/pl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/pt-br.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/pt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/ro.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/ru.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/si.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/sk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/sl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/sq.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/sr-latn.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/sr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/sv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/th.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/tr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/tt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/ug.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/uk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/vi.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/zh-cn.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/a11yhelp/dialogs/lang/zh.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/about/dialogs/about.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/about/dialogs/hidpi/logo_ckeditor.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/about/dialogs/logo_ckeditor.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/LICENSE.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/dialogs/base64image.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/icons/base64image.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/icons/hidpi/base64image.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/af.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/ar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/bg.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/bn.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/bs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/ca.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/cs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/cy.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/da.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/de-ch.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/de.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/el.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/en-au.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/en-ca.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/en-gb.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/en.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/eo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/es.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/et.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/eu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/fa.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/fi.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/fo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/fr-ca.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/fr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/gl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/gu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/he.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/hi.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/hr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/hu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/id.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/is.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/it.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/ja.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/ka.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/km.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/ko.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/ku.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/lt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/lv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/mk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/mn.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/ms.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/nb.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/nl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/no.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/pl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/pt-br.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/pt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/ro.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/ru.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/si.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/sk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/sl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/sq.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/sr-latn.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/sr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/sv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/th.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/tr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/ug.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/uk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/vi.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/zh-cn.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/lang/zh.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/base64image/plugin.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/clipboard/dialogs/paste.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/colordialog/dialogs/colordialog.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/colordialog/dialogs/colordialog.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/dialog/dialogDefinition.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/div/dialogs/div.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/find/dialogs/find.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/flash/dialogs/flash.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/flash/images/placeholder.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/forms/dialogs/button.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/forms/dialogs/checkbox.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/forms/dialogs/form.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/forms/dialogs/hiddenfield.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/forms/dialogs/radio.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/forms/dialogs/select.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/forms/dialogs/textarea.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/forms/dialogs/textfield.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/forms/images/hiddenfield.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/icons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/icons_hidpi.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/iframe/dialogs/iframe.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/iframe/images/placeholder.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/image/dialogs/image.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/image/images/noimage.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/link/dialogs/anchor.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/link/dialogs/link.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/link/images/anchor.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/link/images/hidpi/anchor.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/liststyle/dialogs/liststyle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/magicline/images/hidpi/icon-rtl.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/magicline/images/hidpi/icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/magicline/images/icon-rtl.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/magicline/images/icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/pagebreak/images/pagebreak.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/pastefromword/filter/default.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/preview/preview.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/scayt/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/scayt/LICENSE.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/scayt/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/scayt/dialogs/options.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/scayt/dialogs/toolbar.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/showblocks/images/block_address.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/showblocks/images/block_blockquote.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/showblocks/images/block_div.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/showblocks/images/block_h1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/showblocks/images/block_h2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/showblocks/images/block_h3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/showblocks/images/block_h4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/showblocks/images/block_h5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/showblocks/images/block_h6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/showblocks/images/block_p.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/showblocks/images/block_pre.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/dialogs/smiley.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/angel_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/angel_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/angry_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/angry_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/broken_heart.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/broken_heart.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/confused_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/confused_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/cry_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/cry_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/devil_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/devil_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/embaressed_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/embarrassed_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/embarrassed_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/envelope.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/envelope.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/heart.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/heart.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/kiss.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/kiss.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/lightbulb.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/lightbulb.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/omg_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/omg_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/regular_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/regular_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/sad_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/sad_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/shades_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/shades_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/teeth_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/teeth_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/thumbs_down.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/thumbs_down.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/thumbs_up.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/thumbs_up.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/tongue_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/tongue_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/tounge_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/whatchutalkingabout_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/whatchutalkingabout_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/wink_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/smiley/images/wink_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/_translationstatus.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/af.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/ar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/bg.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/ca.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/cs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/cy.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/da.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/de-ch.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/de.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/el.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/en-gb.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/en.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/eo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/es.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/et.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/eu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/fa.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/fi.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/fr-ca.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/fr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/gl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/he.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/hr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/hu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/id.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/it.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/ja.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/km.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/ko.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/ku.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/lt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/lv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/nb.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/nl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/no.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/pl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/pt-br.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/pt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/ru.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/si.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/sk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/sl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/sq.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/sv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/th.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/tr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/tt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/ug.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/uk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/vi.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/zh-cn.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/lang/zh.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/specialchar/dialogs/specialchar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/table/dialogs/table.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/tabletools/dialogs/tableCell.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/templates/dialogs/templates.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/templates/dialogs/templates.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/templates/templates/default.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/templates/templates/images/template1.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/templates/templates/images/template2.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/templates/templates/images/template3.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/wsc/LICENSE.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/wsc/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/wsc/dialogs/ciframe.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/wsc/dialogs/tmpFrameset.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/wsc/dialogs/wsc.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/wsc/dialogs/wsc.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/plugins/wsc/dialogs/wsc_ie.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/css/samples.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/img/github-top.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/img/header-bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/img/header-separator.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/img/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/img/navigation-tip.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/js/sample.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/js/sf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/old/ajax.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/old/api.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/old/appendto.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/old/assets/inlineall/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/old/assets/outputxhtml/outputxhtml.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/old/assets/posteddata.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/old/assets/sample.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/old/assets/uilanguages/languages.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/old/datafiltering.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/old/dialog/assets/my_dialog.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/old/dialog/dialog.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/old/divreplace.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/old/enterkey/enterkey.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/old/htmlwriter/assets/outputforflash/outputforflash.fla" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/old/htmlwriter/assets/outputforflash/outputforflash.swf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/old/htmlwriter/assets/outputforflash/swfobject.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/old/htmlwriter/outputforflash.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/old/htmlwriter/outputhtml.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/old/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/old/inlineall.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/old/inlinebycode.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/old/inlinetextarea.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/old/jquery.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/old/magicline/magicline.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/old/readonly.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/old/replacebyclass.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/old/replacebycode.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/old/sample.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/old/sample.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/old/sample_posteddata.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/old/tabindex.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/old/toolbar/toolbar.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/old/uicolor.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/old/uilanguages.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/old/wysiwygarea/fullpage.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/old/xhtmlstyle.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/toolbarconfigurator/css/fontello.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/toolbarconfigurator/font/LICENSE.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/toolbarconfigurator/font/config.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/toolbarconfigurator/font/fontello.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/toolbarconfigurator/font/fontello.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/toolbarconfigurator/font/fontello.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/toolbarconfigurator/font/fontello.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/toolbarconfigurator/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/toolbarconfigurator/js/abstracttoolbarmodifier.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/toolbarconfigurator/js/fulltoolbareditor.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/toolbarconfigurator/js/toolbarmodifier.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/toolbarconfigurator/js/toolbartextmodifier.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/toolbarconfigurator/lib/codemirror/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/toolbarconfigurator/lib/codemirror/javascript.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/moono/dialog.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/moono/dialog_ie.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/moono/dialog_ie7.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/moono/dialog_ie8.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/moono/dialog_iequirks.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/moono/editor.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/moono/editor_gecko.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/moono/editor_ie.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/moono/editor_ie7.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/moono/editor_ie8.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/moono/editor_iequirks.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/moono/icons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/moono/icons_hidpi.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/moono/images/arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/moono/images/close.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/moono/images/hidpi/close.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/moono/images/hidpi/lock-open.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/moono/images/hidpi/lock.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/moono/images/hidpi/refresh.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/moono/images/lock-open.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/moono/images/lock.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/moono/images/refresh.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/moono/images/spinner.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/moono/readme.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/office2013/dialog.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/office2013/editor.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/office2013/icons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/office2013/icons_hidpi.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/office2013/images/arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/office2013/images/close.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/office2013/images/hidpi/close.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/office2013/images/hidpi/lock-open.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/office2013/images/hidpi/lock.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/office2013/images/hidpi/refresh.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/office2013/images/lock-open.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/office2013/images/lock.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/office2013/images/refresh.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/skins/office2013/skin.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/ckeditor/styles.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/controllers.js" afterPath="$PROJECT_DIR$/scripts/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/main.js" afterPath="$PROJECT_DIR$/scripts/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/pages/registration-page.html" afterPath="$PROJECT_DIR$/templates/pages/registration-page.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.xml" afterPath="$PROJECT_DIR$/config.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="credito-allinone-yaroslav.iws" />
@@ -511,10 +27,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42774567" vertical-offset="1325" max-vertical-offset="2235">
+            <state vertical-scroll-proportion="-15.416667" vertical-offset="1325" max-vertical-offset="2235">
               <caret line="113" column="63" selection-start-line="113" selection-start-column="63" selection-end-line="113" selection-end-column="63" />
               <folding />
             </state>
@@ -531,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="config.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.34922394" vertical-offset="0" max-vertical-offset="1200">
+              <caret line="21" column="62" selection-start-line="21" selection-start-column="62" selection-end-line="21" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -583,11 +99,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config.xml" />
         <option value="$PROJECT_DIR$/scripts/main.js" />
         <option value="$PROJECT_DIR$/templates/pages/registration-page.html" />
         <option value="$PROJECT_DIR$/scripts/controllers.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/config.xml" />
       </list>
     </option>
   </component>
@@ -767,14 +283,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.5555556" vertical-offset="0" max-vertical-offset="12420">
@@ -805,8 +313,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42774567" vertical-offset="1325" max-vertical-offset="2235">
+        <state vertical-scroll-proportion="-15.416667" vertical-offset="1325" max-vertical-offset="2235">
           <caret line="113" column="63" selection-start-line="113" selection-start-column="63" selection-end-line="113" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34922394" vertical-offset="0" max-vertical-offset="1200">
+          <caret line="21" column="62" selection-start-line="21" selection-start-column="62" selection-end-line="21" selection-end-column="62" />
           <folding />
         </state>
       </provider>
