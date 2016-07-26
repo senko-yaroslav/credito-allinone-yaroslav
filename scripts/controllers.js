@@ -584,8 +584,10 @@ creditoControllers.controller('LoginController', ['$rootScope', '$scope', '$loca
                     }
 
                 }, function(error) {
-                    console.log('error', error);
-                    alert(2)
+                    alert('error: ' + error)
+                    alert('$scope.loginModel.errorMessage: ' + error.data.error_description)
+                    alert('UserDetails.email: ' + UserDetails.email)
+                    alert('UserDetails.pass: ' + UserDetails.pass)
                     $scope.loginModel.errorMessage = error.data.error_description;
                     $scope.login.password.$setValidity('incorrect', false);
                     $timeout(function() {
