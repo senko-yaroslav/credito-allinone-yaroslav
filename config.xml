@@ -67,13 +67,17 @@
     <gap:splash gap:platform="ios" height="768" src="res/screen/ios/screen-ipad-landscape.png" width="1024" />
 
 
-    <access origin="https://credito.igniteoutsourcing.com" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
 
-    <!-- Enable requests to content: URLs -->
-    <access origin="content:///*" />
-
-    <!-- Don't block any requests -->
-    <access origin="*" subdomains="true" />
+    <allow-navigation href="http://*/*" />
+    <allow-navigation href="https://*/*" />
+    <allow-navigation href="data:*" />
 
     <platform name="android">
         <icon src="res/icon/android/icon-ldpi.png" density="ldpi" />

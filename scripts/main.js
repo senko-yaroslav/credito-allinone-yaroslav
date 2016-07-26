@@ -113,6 +113,7 @@ Credito.config(['$routeProvider',
         when('/', {
           templateUrl: 'templates/pages/login-page.html',
           controller: 'LoginController',
+          abstract: true,
           resolve: {
             permission: ['authorizationService', function(authorizationService) {
               return authorizationService.permissionCheck([roles.Unauthorized]);
@@ -682,6 +683,7 @@ Credito.config(['$translateProvider', function($translateProvider) {
 
 Credito.run(['$rootScope', '$translate', '$window', '$location', 'Restangular', 'CONFIG', '$interval', '$timeout', '$route',
   function($rootScope, $translate, $window, $location, Restangular, CONFIG, $timeout, $route) {
+
     $rootScope.CONFIG = CONFIG;
 
     LS = JSON.parse(localStorage.getItem('AllInOne'));
@@ -694,43 +696,6 @@ Credito.run(['$rootScope', '$translate', '$window', '$location', 'Restangular', 
         "Expires": 0
       });
     }
-
-    Restangular.addRequestInterceptor(function(element, operation, what, url) {
-      var lastTokenRetrived = LS.lastTokenRetrived;
-      if( LS.token && (operation == 'get' || operation == 'post') ) {
-        var min = 1000 * CONFIG.REFRESH_TOKEN_INTERVAL * 1;
-        var isPast = (new Date().getTime() - lastTokenRetrived < min) ? false : true;
-
-        if(isPast) {
-          $.ajax({
-            url: CONFIG.API_URL + '/oauth/token/refresh',
-            method: 'GET',
-            headers: {
-              Authorization: 'Bearer ' + LS.token,
-              "Cache-Control": "no-cache, no-store, must-revalidate",
-              "Pragma": "no-cache",
-              "Expires": 0
-            },
-            success: function(response) {
-              LS.token = response.access_token;
-              LS.lastTokenRetrived = new Date().getTime();
-              localStorage.setItem('AllInOne', JSON.stringify(LS));
-
-              Restangular.setDefaultHeaders({
-                Authorization: 'Bearer ' + LS.token,
-                "Cache-Control": "no-cache, no-store, must-revalidate",
-                "Pragma": "no-cache",
-                "Expires": 0
-              });
-            },
-            error: function(e) {
-              console.log('e', e)
-            }
-          });
-        }
-      }
-      return element;
-    });
 
     Restangular.setErrorInterceptor(function (response) {
       switch (response.status) {
@@ -796,20 +761,6 @@ Credito.run(['$rootScope', '$translate', '$window', '$location', 'Restangular', 
           break;
       }
     });
-
-    $rootScope.online = navigator.onLine;
-    $window.addEventListener("offline", function () {
-      $rootScope.$apply(function() {
-        $rootScope.online = false;
-        $window.location.href = '#/offline';
-      });
-    }, false);
-    $window.addEventListener("online", function () {
-      $rootScope.$apply(function() {
-        $rootScope.online = true;
-        $window.history.back();
-      });
-    }, false);
 
 
     $rootScope.$on('$locationChangeSuccess', function(event) {
