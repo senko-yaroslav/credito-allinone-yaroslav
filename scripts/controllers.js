@@ -503,6 +503,7 @@ creditoControllers.controller('LoginController', ['$rootScope', '$scope', '$loca
                 post($.param(UserDetails.getLoginUserData()), {}, {'Content-Type': 'application/x-www-form-urlencoded'}
             ).
                 then( function(data) {
+                    alert(1)
                     $scope.isPhoneConfirmed = DecodeToken.decodeJwt(data.access_token).AuthorizationDenied == 'PhoneNotConfirmed' ? true : false;
 
                     if($scope.isPhoneConfirmed) {
@@ -584,6 +585,7 @@ creditoControllers.controller('LoginController', ['$rootScope', '$scope', '$loca
 
                 }, function(error) {
                     console.log('error', error);
+                    alert(2)
                     $scope.loginModel.errorMessage = error.data.error_description;
                     $scope.login.password.$setValidity('incorrect', false);
                     $timeout(function() {

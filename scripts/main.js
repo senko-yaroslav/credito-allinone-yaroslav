@@ -1,4 +1,4 @@
-'use strict';
+//'use strict';
 var LS = JSON.parse(localStorage.getItem('AllInOne')) || {};
 
 var app = {
@@ -13,7 +13,7 @@ var app = {
     angular.element(document).ready(function() {
       angular.bootstrap(document);
     });
-  },
+  }
 };
 
 var roles = {
