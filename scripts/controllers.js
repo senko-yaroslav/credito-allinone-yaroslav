@@ -406,8 +406,8 @@ creditoControllers.controller('AdminMenuController', ['$scope',
         };
     }]);
 
-creditoControllers.controller('RegisterController', ['$scope', '$rootScope', '$route', '$timeout', '$location', 'RegistrationService', 'Restangular', 'md5', 'UserDetails', 'vcRecaptchaService', 'CONFIG', 'DecodeToken',
-    function ($scope, $rootScope, $route, $timeout, $location, RegistrationService, Restangular, md5, UserDetails, vcRecaptchaService, CONFIG, DecodeToken) {
+creditoControllers.controller('RegisterController', ['$scope', '$rootScope', '$route', '$timeout', '$location', 'RegistrationService', 'Restangular', 'md5', 'UserDetails', 'CONFIG', 'DecodeToken',
+    function ($scope, $rootScope, $route, $timeout, $location, RegistrationService, Restangular, md5, UserDetails, CONFIG, DecodeToken) {
         LS.firstEnterFlag = 1;
         localStorage.setItem('AllInOne', JSON.stringify(LS));
 

@@ -1,9 +1,20 @@
 'use strict';
 var LS = JSON.parse(localStorage.getItem('AllInOne')) || {};
 
-angular.element(document).ready(function() {
-  angular.bootstrap(document, ['Credito']);
-});
+var app = {
+  initialize: function() {
+    this.bindEvents();
+  },
+  bindEvents: function() {
+    document.addEventListener('deviceready', this.onDeviceReady, true);
+  },
+
+  onDeviceReady: function() {
+    angular.element(document).ready(function() {
+      angular.bootstrap(document);
+    });
+  },
+};
 
 var roles = {
   Unauthorized: 0,
@@ -18,7 +29,7 @@ if(typeof LS.roles == 'undefined') {
   localStorage.setItem('AllInOne', JSON.stringify(LS));
 }
 
-var Credito = angular.module('Credito', [
+var Credito = angular.module('App', [
   'ngRoute',
   'angularLoad',
   'restangular',
