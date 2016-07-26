@@ -1,0 +1,62 @@
+<div id="statistics">
+    <div id="basket" class="blue-theme ng-scope">
+        <div class="row-eq-height">
+            <div class="col-md-3  col-xs-2">
+                <div class="well well-lg text-center lead">
+                    <div>{{'PURCHASING_GROUP.PORTFOLIO_VALUE' | translate}}</div>
+                    <div><span>{{portfolioInfo.portfolioValue | number : fractionSize}}</span> ₪</div>
+                </div>
+            </div>
+            <div class="col-md-3  col-xs-2">
+                <div class="well well-lg text-center lead">
+                    <div>{{'PURCHASING_GROUP.PORTFOLIO_DURATION' | translate}}</div>
+                    <div><span>{{portfolioInfo.portfolioDuration | number : fractionSize}}</span> </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-xs-2">
+                <div class="well well-lg text-center lead">
+                    <div>{{'PURCHASING_GROUP.NUMBER_OF_BORROWERS' | translate}}</div>
+                    <div>{{portfolioInfo.borrowerCount | number : fractionSize}}</div>
+                </div>
+            </div>
+            <div class="col-md-3 col-xs-2">
+                <div class="well well-lg text-center lead">
+                    <div>{{'PURCHASING_GROUP.REMAINING_FUND_INTEREST' | translate}}</div>
+                    <div><span>{{portfolioInfo.remainingFund | number : fractionSize}}</span> ₪</div>
+                </div>
+            </div>
+            <div class="col-md-3 col-xs-2">
+                <div class="well well-lg text-center lead">
+                    <div>{{'PURCHASING_GROUP.AVERAGE_INTEREST' | translate}}</div>
+                    <div style="direction: ltr">{{portfolioInfo.averageInterest | number : fractionSize}} %</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h2>{{'INVESTOR_STATISTICS.SUM' | translate}}</h2>
+            <div id="sum-chart" sum-chart></div>
+        </div>
+        <div class="col-md-6">
+            <h2>{{'INVESTOR_STATISTICS.LIQUIDITY' | translate}}</h2>
+            <div id="liquidity-chart" liquidity-chart></div>
+        </div>
+    </div>
+    <div class="row">
+        <h2>{{'INVESTOR_STATISTICS.INTEREST' | translate}}</h2>
+        <div id="interest-chart" interest-chart></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h2>{{'INVESTOR_STATISTICS.TIME' | translate}}</h2>
+            <div id="time-chart" time-chart></div>
+        </div>
+        <div class="col-md-6">
+            <h2>{{'INVESTOR_STATISTICS.STATUS' | translate}}</h2>
+            <div id="status-chart" status-chart></div>
+        </div>
+    </div>
+</div>

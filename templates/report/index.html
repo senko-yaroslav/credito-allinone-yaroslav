@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Report</title>
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <style type="text/css">
+    h2 {margin: 0 !important;}
+    .header { border-bottom: 3px solid #ccc; padding: 10px; }
+    .header img {  height: 80px; }
+    .content{width: 100%; text-align: center; margin: 0 auto; }
+    .content .big-logo { margin: 100px 0; text-align: center; }
+    .content .big-logo img { width: 78%; /*height: 462px;*/ }
+    .content h1 { color: rgb(0, 27, 70); margin: 100px 0 60px 0; direction: rtl; }
+    .footer { text-align: right; padding: 23px;  direction: rtl; }
+    .footer .credito { margin: 0  0 0 50px; font-weight: bold; }
+    #report { width: 80%; margin: 0px auto 20px auto; font-size: 80%; }
+    #report tbody.chart-table td {padding:3px 8px;}
+    #report tbody.chart-table.middle-table td {padding:1px 8px;}
+    #report tbody.chart-table.big-table td {padding:0px 8px;}
+    .page-2 {
+      width: 90%;
+      margin: 0 auto;
+      -webkit-border-radius: 0 0 30px 30px;
+      -moz-border-radius: 0 0 30px 30px;
+      border-radius: 0 0 30px 30px;
+      background: #e6e6e6;
+      padding: 25px;
+    }
+    .page-2-content {min-height:1094px; }
+    .page-2-header {
+      width: 90%;
+      height: 100px;
+      margin: 20px auto 0 auto !important;
+      -webkit-border-radius: 30px 30px 0 0;
+      -moz-border-radius: 30px 30px 0 0;
+      border-radius: 30px 30px 0 0;
+      background: #23527c;
+      text-align: center;
+    }
+    .page-2-header h1 { color: #fff; line-height: 64%; font-size: 62pt; }
+    .row { margin: 0; }
+    .table.page-3 {  margin: 0; }
+    .center { text-align: center;  }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">
+    <img src="img/logo.png" alt="" title=""/>
+  </div>
+  <div class="content">
+    <div class="row big-logo">
+      <img src="img/logo-big.jpg" alt=""/>
+      <h1>תמחור אשראי ללקוח <span id="customerId"></span></h1>
+    </div>
+  </div>
+  <div style="height:420px"></div>
+  <div class="footer">
+    <span class="credito">קרדיטו</span><span>טל': 077-7313333 | פקס: 077-8013232 | www.credito.co.il</span>
+  </div>
+</div>
+<div class="wrap">
+  <div class="header">
+    <img src="img/logo.png" alt="" title=""/>
+  </div>
+
+  <div class="row page-2-header" ><h1>תמחור הלוואה</h1></div>
+  <div class="content container page-2 page-2-content">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>וכיסוי (LTV) יחסי מינוף</h2>
+      </div>
+      <div class="col-md-6">
+        <h2>מבנה ההלוואה המבוקשת</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <table class="table table-striped table-bordered" cellspacing="0" width="80%">
+          <tbody>
+
+          <tr>
+            <td id="theoreticalSpitzerPayment"></td>
+            <td>תשלום שפיצר תאורטי</td>
+          </tr>
+          <tr>
+            <td id="originalLTV"></td>
+            <td>שיעור המימון המקורי</td>
+          </tr>
+          <tr>
+            <td id="PersonalIncome"></td>
+            <td>הכנסה נטו חודשית אישית</td>
+          </tr>
+          <!--tr>
+            <td id="weightedLTV"></td>
+            <td>שיעור המימון המשוקלל</td>
+          </tr-->
+          <tr>
+            <td id="netFamilyIncome"></td>
+            <td>הכנסה נטו חודשית משפחתית</td>
+          </tr>
+          <tr>
+            <td id="ReturnFamilyIncomeRatio"></td>
+            <td style="direction: rtl;">שיעור החזר מהכנסה משפח' <span style="font-size:10px;"> (תשלום נוכחי)</span></td>
+
+          </tr>
+          <tr>
+            <td id="AllReturnsFamilyIncomeRatio"></td>
+            <td style="direction: rtl;">שיעור החזר מהכנסה משפח' <span style="font-size:10px;">  (כלל תשלומי חוב)</span></td>
+          </tr>
+          <!--tr>
+            <td id="weightedFamilyYearlyIncomeRate"></td>
+            <td>הכנסה משפחתית שנתית משוקללת</td>
+          </tr-->
+          <tr>
+            <td id="debtToYearlyIncomeRate"></td>
+            <td>יחס חוב להכנסה שנתית</td>
+          </tr>
+          <!--tr>
+            <td id="weightedDebtToYearlyIncomeRate"><h2></h2></td>
+            <td>יחס חוב להכנסה שנתית משוקלל</td>
+          </tr-->
+          <tr>
+            <td id="AllObligationsFamilyYearlyIncomeRatio"></td>
+            <td>יחס חוב כולל** להכנסה משפ' שנתית</td>
+          </tr>
+          <tr>
+            <td id="RedLightNote"><h2></h2></td>
+            <td>אורות אדומים</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-6">
+        <table class="table table-striped table-bordered" cellspacing="0" width="80%">
+          <tbody>
+          <tr>
+            <td id="LoanReason"></td>
+            <td>מטרת ההלוואה</td>
+          </tr>
+          <tr>
+            <td id="lounSum"></td>
+            <td>סכום מאושר בש"ח</td>
+          </tr>
+          <tr>
+            <td id="lounLength"></td>
+            <td>תקופת הלוואה בחודשים</td>
+          </tr>
+          <tr>
+            <td id="LoanType"></td>
+            <td>סוג הלוואה</td>
+          </tr>
+          <tr>
+            <td id="linked">לא צמוד</td>
+            <td>הצמדה</td>
+          </tr>
+          <tr>
+            <td id="interestType">משתנה</td>
+            <td>סוג ריבית</td>
+          </tr>
+          <tr>
+            <td id="baseInterest">פריים</td>
+            <td>סוג ריבית עוגן משתנה</td>
+          </tr>
+          <tr>
+            <td id="riskFreeInterest">0.1%</td>
+            <td>ריבית חסרת סיכון</td>
+          </tr>
+          <tr>
+            <td id="PrimeInterest"></td>
+            <td>ריבית פריים</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="row">
+      <table class="table table-striped table-bordered interest">
+        <tr>
+          <td class="col-md-6">
+            <h4 id="interest"></h4>
+          </td>
+          <td class="col-md-6">
+            <h4>:מרווח אשראי מומלץ</h4>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+
+    <div class="row">
+      <table id="Collaterals" class="table table-striped table-bordered" cellspacing="0" width="80%" style="direction: rtl;">
+        <thead style="background: #23527c; color: #fff; font-weight: bold;"></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div id="container" style="width: 100%; height: 270px; margin: 0 auto"></div>
+      </div>
+      <div class="col-md-6">
+        <table id="report" class="table table-striped table-bordered page-3" cellspacing="0" width="80%">
+          <thead>
+          <tr>
+            <th class="active center">ריבית</th>
+            <th class="success center">LTV</th>
+            <th class="info center">סכום הלוואה</th>
+          </tr>
+          </thead>
+          <tbody class="chart-table"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+
+      </div>
+      <div class="col-md-6">
+        <div style="direction: rtl; text-align:right;">
+          * סכום ההלוואה הנוכחית<br/>
+          ** סך ההתחייבויות של הלווה  - כולל ההלוואה הנוכחית.<br/>
+          <span style="vertical-align:top; font-size:10px;">1</span> עבור הלוואת בולט או בלון התשלום התיאורטי יחושב ל-7 שנים.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="height:50px"></div>
+  <div class="footer">
+    <span class="credito">קרדיטו</span><span>טל': 077-7313333 | פקס: 077-8013232 | www.credito.co.il</span>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="header">
+    <img src="img/logo.png" alt="" title=""/>
+  </div>
+
+  <div class="row page-2-header">
+    <h1>נתונים כלליים</h1>
+  </div>
+  <div class="content container page-2">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>השכלה ותעסוקה</h2>
+      </div>
+      <div class="col-md-6">
+        <h2>כללי</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <table class="table table-striped table-bordered" cellspacing="0" width="80%">
+          <tbody>
+          <tr>
+            <td id="Profession"></td>
+            <td>מקצוע</td>
+          </tr>
+          <tr>
+            <td id="ProfessionBranch"></td>
+            <td>ענף</td>
+          </tr>
+          <tr>
+            <td id="EducationStatus"></td>
+            <td>השכלה</td>
+          </tr>
+          <tr>
+            <td id="EmploymentStatus"></td>
+            <td>מצב תעסוקתי</td>
+          </tr>
+          <tr>
+            <td id="YearsInCurrentJob"></td>
+            <td>ותק תעסוקתי נוכחי</td>
+          </tr>
+          <tr>
+            <td id="YearsInOccupation"></td>
+            <td>ותק במקצוע</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-6">
+        <table class="table table-striped table-bordered" cellspacing="0" width="80%">
+          <tbody>
+          <tr>
+            <td id="IDNumber"></td>
+            <td>.מספר ת.ז</td>
+          </tr>
+          <tr>
+            <td id="FirstName"></td>
+            <td>שם פרטי</td>
+          </tr>
+          <tr>
+            <td id="LastName"></td>
+            <td>שם משפחה</td>
+          </tr>
+          <tr>
+            <td id="Gender"></td>
+            <td>מין</td>
+          </tr>
+          <tr>
+            <td id="BirthDate"></td>
+            <td>שנת לידה</td>
+          </tr>
+          <tr>
+            <td id="MaritalStatus"></td>
+            <td>מצב משפחתי</td>
+          </tr>
+          <tr>
+            <td id="ChildrenNumber"></td>
+            <td>מספר ילדים</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+
+    <div class="row">
+      <div class="col-md-6">
+        <h2>‫התחייבויות‬</h2>
+      </div>
+      <div class="col-md-6">
+        <h2>‫נכסים‬</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <table class="table table-striped table-bordered" cellspacing="0" width="80%">
+          <tbody>
+          <tr>
+            <td id="MonthlyLoanPaymentsSize">0</td>
+            <td>תשלום חודשי על הלוואות</td>
+          </tr>
+          <tr>
+            <td id="EstateLiabilitiesSize">0</td>
+            <td>סך התחייבויות נדל"ן</td>
+          </tr>
+          <tr>
+            <td id="CarLiabilitiesSize">0</td>
+            <td>סך התחייבויות רכב</td>
+          </tr>
+          <tr>
+            <td id="TotalDebt">0</td>
+            <td>סך החובות</td>
+          </tr>
+          <tr>
+            <td id="AlimonyGivenSize">0</td>
+            <td>תשלום מזונות</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-6">
+        <table class="table table-striped table-bordered" cellspacing="0" width="80%">
+          <tbody>
+          <tr>
+            <td id="HouseOwnership">0</td>
+            <td>בעלות על דירה</td>
+          </tr>
+          <tr>
+            <td id="HousingValue">0</td>
+            <td style="direction: rtl;">שווי נדל״ן (כולל דירת מגורים)</td>
+          </tr>
+          <tr>
+            <td id="VehicleNumber">0</td>
+            <td>שווי סך הרכבים</td>
+          </tr>
+          <tr>
+            <td id="FinancialAssetsValue">0</td>
+            <td>שווי נכסים פיננסים</td>
+          </tr>
+          <tr>
+            <td id="AlimonyReceivedSize">0</td>
+            <td>קבלת מזונות</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <h2>‫‫נתוני חשבון בנק‬</h2>
+      </div>
+      <div class="col-md-6">
+        <h2>פרטי התקשרות</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <table class="table table-striped table-bordered" cellspacing="0" width="80%">
+          <tbody>
+          <tr>
+            <td id="BankNameList"></td>
+            <td>בנק</td>
+          </tr>
+          <tr>
+            <td id="BankBranchName"></td>
+            <td>סניף</td>
+          </tr>
+          <tr>
+            <td id="BankAccountNumber"></td>
+            <td>מס' חשבון</td>
+          </tr>
+          <tr>
+            <td id="CreditCardOwnership"></td>
+            <td>בעל/ת כרטיס אשראי</td>
+          </tr>
+          <tr>
+            <td id="YearsInAccount"></td>
+            <td style="direction: rtl;">ותק בחשבון (שנים)</td>
+          </tr>
+
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-6">
+        <table class="table table-striped table-bordered" cellspacing="0" width="80%">
+          <tbody>
+          <tr>
+            <td id="City"></td>
+            <td>עיר</td>
+          </tr>
+          <tr>
+            <td id="Street"></td>
+            <td>רחוב</td>
+          </tr>
+          <tr>
+            <td id="BuildingNumber"></td>
+            <td>מספר בית</td>
+          </tr>
+          <tr>
+            <td id="ApartmentNumber"></td>
+            <td>מספר דירה</td>
+          </tr>
+          <tr>
+            <td id="ApartmentFloor"></td>
+            <td>קומה</td>
+          </tr>
+          <tr>
+            <td id="PhoneNumber"></td>
+            <td>מספר טלפון</td>
+          </tr>
+          <tr>
+            <td id="Email"></td>
+            <td>אימייל</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <h2>רשימת המסמכים</h2>
+      </div>
+      <div class="col-md-6">
+        <h2>תיאור הבקשה</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <table class="table table-striped table-bordered" cellspacing="0" width="80%">
+          <tbody>
+          <tr>
+            <td id="IDDocument"></td>
+            <td>תעודת זהות</td>
+          </tr>
+          <tr>
+            <td id="BankPrints"></td>
+            <td>תדפיס עו"ש</td>
+          </tr>
+          <tr>
+            <td id="Salary"></td>
+            <td>משכורת</td>
+          </tr>
+          <tr>
+            <td id="SpouseSalary"></td>
+            <td>משכורת בן/בת זוג</td>
+          </tr>
+          <tr>
+            <td id="OtherDocument"></td>
+            <td>תדפיס משכנתא</td>
+          </tr>
+          <tr>
+            <td id="HaveCreditHistoryReport"></td>
+            <td>BDI</td>
+          </tr>
+          <tr>
+            <td id="BankID"></td>
+            <td>תעודת זהות בנקאית</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-6">
+        <div style="background: #fff;min-height: 259px;">
+          <strong id="LoanPurpose"></strong>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="vendor/highcharts/highcharts.js"></script>
+  <script type="text/javascript" src="vendor/highcharts/highcharts-more.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      var i18n = {
+        "SELECT_OPTIONS": {
+          "Email": "אימייל",
+          "Israel": "ישראל",
+          "USA": "ארה\"ב",
+          "Germany": "גרמניה",
+          "UK": "בריטניה",
+          "Single": "רווק\\ה",
+          "Married": "נשוי\\ה",
+          "Divorced": "גרוש\\ה",
+          "Widowed": "אלמנ\\ה",
+          "Male": "זכר",
+          "Female": "נקבה",
+          "EconomicsAndCapitalMarkets": "כלכלה ושוק ההון",
+          "MedicalAndHealth": "רפואה ובריאות",
+          "Administration": "מנהל",
+          "ComputersAndNetworks": "מחשבים ורשתות",
+          "Another": "אחר",
+          "Elementary": "יסודי",
+          "HighSchool": "תיכון",
+          "BA": "תואר ראשון",
+          "MA": "תואר שני",
+          "PHD": "תואר שלישי ומעלה",
+          "Engineer": "מהנדס",
+          "Handesai": "הנדסאי",
+          "FullJob": "שכיר במשרה מלאה",
+          "PartTimeJob": "שכיר במשרה חלקית",
+          "Freelancer": "עצמאי",
+          "Student": "סטודנט",
+          "Unemployed": "לא עובד",
+          "ExactScience": "מדע מדויק",
+          "Economics": "כלכלה",
+          "ComputerScience": "מדעי מחשב",
+          "Psychology": "פסיכולוגיה",
+          "Yes": "יש",
+          "No": "אין",
+          "Shpitzer": "תשלום קבוע",
+          "Bullet": "בולט",
+          "Baloon": "בלון",
+          "FixedFund": "תשלום קרן קבועה",
+          "Bond": "אג\"ח",
+          "Shares": "מנייתי",
+          "Mixed": "גמיש",
+          "Managers": "מנהל",
+          "Academic": "אקדמאי",
+          "Engineers": "הנדסאי או טכנאי",
+          "Clerks_Office": "פקיד או עובד משרד",
+          "Sales_Services": "סוכן מכירות או שירותים",
+          "Agriculture": "חקלאי",
+          "Manufacture_Construction": "עובד מקצועי בתעשייה או בינוי",
+          "Unskilled": "אחר",
+          "Vacation":"חתונה",
+          "Education":"שיפוץ",
+          "HomeINprovement":"לימודים",
+          "Wedding":"חופשה",
+          "Medical":"סגירת מינוס בבנק",
+          "Mortgage":"קניית רכב",
+          "Vehicle":"משלימה למשכנתא",
+          "DebtInBank":"טיפולים רפואיים",
+          "Refinancing":"מיחזור אשראי",
+          "BeautyJobs":"טיפול קוסמטי",
+          "Business":"הקמת עסק",
+          "Other":"אחר",
+          "Pensioner": "גמלאי",
+          "BankOfIsrael":"בנק ישראל",
+
+          "BankHapoalim":"בנק הפועלים",
+          "BankLeumi":"בנק לאומי",
+          "BankDiscount":"בנק דיסקונט",
+          "BankMizrahiTefahot":"בנק מזרחי טפחות",
+          "BankBeynLeumi":"הבנק הבינלאומי הראשון",
+          "BankOtzarHaHayal":"בנק אוצר החייל",
+          "BankMercantile":"בנק מרכנתיל דיסקונט",
+          "BankDoar":"בנק הדואר",
+          "BankIgud":"בנק איגוד",
+          "BankMasad":"בנק מסד",
+          "BankPoaleyAgudatIsrael":"בנק פועלי אגודת ישראל",
+          "BankDMB":"בנק דיסקונט למשכנתאות",
+          "BankLeumiMortgage":"בנק לאומי למשכנתאות בע\"מ",
+          "BankYahav":"בנק יהב לעובדי המדינה",
+          "BankUbank":"יובנק בע\"מ",
+          "BankPituahTasiya":"בנק לפיתוח התעשיה",
+          "BankHasapanut":"בנק הספנות לישראל",
+          "BankAdanim":"בנק אדנים",
+          "BankJerusalem":"בנק ירושלים",
+          "BankArveyIsrael":"בנק ערבי ישראלי",
+          "BankEuroTrade":"בנק יורו טרייד",
+          "BankHaHaklaut":"בנק החקלאות לישראל",
+          "BankCiti":"בנק סיטי",
+          "BankInfo":"בנק אינפו",
+          "BankHaOvedHaleumi":"קופת העובד הלאומי",
+          "BankOtzarHaShiltonHaMekomi":"בנק אוצר השלטון המקומי",
+          "BankDexia":"בנק דקסיה",
+          "BankHSBC":"HSBC",
+          "BankArabLand":"Arab Land Bank",
+          "BankBNPParibas":"BNP Paribas Israel",
+          "BankCitibank":"Citibank N.A",
+          "BankSBI":"SBI State Bank of India",
+
+          "Industry":"תעשייה; כרייה וחציבה",
+          "Infrastructure":"אספקת חשמל ומים, שירותי ביוב וטיפול בפסולת",
+          "Building":"בינוי",
+          "TradingAndVehicles":"מסחר סיטוני וקמעוני ותיקון כלי רכב מנועיים",
+          "TransportAndMail":"שירותי תחבורה, אחסנה, דואר ובלדרות",
+          "FoodIndustry":"שירותי אירוח ואוכל",
+          "Information":"מידע ותקשורת",
+          "FinancialAndInsurance":"שירותים פיננסיים ושירותי ביטוח",
+          "Housing":"פעילויות בנדל''ן",
+          "ScienceAndProfessional":"שירותים מקצועיים, מדעיים וטכניים",
+          "SupportAndManagement":"שירותי ניהול ותמיכה",
+          "Educational":"חינוך",
+          "HealthAndCare":"שירותי בריאות ושירותי רווחה וסעד",
+          "ArtAndEntertainment":"אמנות, בידור ופנאי",
+
+          "Expired_CapitalPensionFund":"נזילה",
+          "ExpiredOnEnd_CapitalPensionFund":"נזילה במועד הפירעון",
+          "NotExpired_CapitalPensionFund":"לא נזילה במועד הפירעון",
+
+          "Expired_AllocatedPensionFund":"משלמת",
+          "ExpiredOnEnd_AllocatedPensionFund":"תשלם במועד הפירעון",
+          "NotExpired_AllocatedPensionFund":"לא תשלם במועד הפירעון",
+
+          "Expired_EducationFund":"נזילה",
+          "ExpiredOnEnd_EducationFund":"נזילה במועד הפירעון",
+          "NotExpired_EducationFund":"לא נזילה במועד הפירעון",
+
+          "LinkedPercent": "צמודה",
+          "FixedPercent": "קבועה"
+        }
+      };
+      var url = window.location.href.split('?')[1].split('&');
+      var collaterals = JSON.parse( decodeURIComponent(url[3].split('=')[1]) );
+
+      $.ajax({
+        url : window.location.href.substring(0, window.location.href.indexOf("/Templates")) + '/api/reportcalc/'+url[0].split('=')[1] +'?customerId=' + url[1].split('=')[1],
+        //'url' : 'https://credito.igniteoutsourcing.com/api/reportcalc/'+url[0].split('=')[1] +'?customerId=' + url[1].split('=')[1],
+        method: "POST",
+        headers: {
+          "Authorization":"Bearer " + base64_decode(url[2].split('=')[1])
+        },
+        data: collaterals,
+        success: function(data) {
+          //first page///////////////////////////////////////////////////
+          $('#customerId').text(data.customerData[0].values[0].value);
+          //second page/////////////////////////////////////////////////
+          var xAxis = [];
+          var yAxis = [];
+          $.each(data.loanData.graphAnswers, function(item){
+            xAxis.push(data.loanData.graphAnswers[item].loanSize);
+            yAxis.push(data.loanData.graphAnswers[item].interest);
+          });
+          $('#container').highcharts({
+            credits: {
+              enabled: false
+            },
+            title: {
+              text: 'Report Graph',
+              x: -20
+            },
+            xAxis: {
+              labels: {
+                formatter:function() {
+                  return Highcharts.numberFormat(this.value, 0, '', ',');
+                }
+              },
+              categories: xAxis
+            },
+            plotOptions: {
+              line: {
+                animation: false
+              }
+            },
+            yAxis: {
+              title: {
+                text: 'Interest'
+              },
+              valueSuffix: '',
+              plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+              }]
+            },
+            legend: {
+              layout: 'vertical',
+              align: 'right',
+              verticalAlign: 'middle',
+              borderWidth: 0
+            },
+            series: [{
+              name: 'val',
+              data: yAxis
+            }]
+          });
+          var chartTable = $('.chart-table');
+          var tableAnswerts = '';
+          if(data.loanData.tableAnswers.length > 16){
+            chartTable.addClass("big-table");
+          } else if (data.loanData.tableAnswers.length > 9){
+            chartTable.addClass("middle-table");
+          }
+          $.each(data.loanData.tableAnswers, function(item){
+            tableAnswerts += '<tr>';
+            tableAnswerts += '<td class="active">' + data.loanData.tableAnswers[item].interest  + '</td>';
+            tableAnswerts += '<td class="success">' + data.loanData.tableAnswers[item].ltv  + '</td>';
+            tableAnswerts += '<td class="info">' + addCommasToInteger(data.loanData.tableAnswers[item].loanSize)  + '</td>';
+            tableAnswerts += '</tr>';
+          });
+          $(tableAnswerts).appendTo(chartTable);
+          $.each(data.customerData, function(item){
+            if(data.customerData[item].name == 'FamilyIncome') {
+              $('#netFamilyIncome').text(addCommasToInteger(data.customerData[item].values[0].value));
+            }
+          });
+          $('#originalLTV').text(data.reportData.ltvData.originalLTVRate);
+          $('#weightedLTV').text(data.reportData.ltvData.weightedLTVRate);
+          $('#weightedFamilyYearlyIncomeRate').text(addCommasToInteger(data.reportData.ltvData.yearlyFamilyIncomeWeghted));
+          $('#ReturnFamilyIncomeRatio').text(data.reportData.ltvData.returnFamilyIncomeRatio);
+          $('#AllReturnsFamilyIncomeRatio').text(data.reportData.ltvData.allReturnsFamilyIncomeRatio);
+          $('#AllObligationsFamilyYearlyIncomeRatio').text(data.reportData.ltvData.allObligationsFamilyYearlyIncomeRatio);
+
+          $('#PrimeInterest').text(data.reportData.primeInterest);
+
+          $('#lounSum').text(addCommasToInteger(data.investorData.loanSize));
+          $('#lounLength').text(data.investorData.loanLengthInMonths);
+
+          var tableCollateralsHeader = '';
+          var tableCollaterals = '';
+          var i = 0;
+          $.each(data.loanData.reportTable, function(item){
+            if(i == 0) {
+              tableCollateralsHeader += '<tr>';
+              tableCollateralsHeader += '<td>' + data.loanData.reportTable[item][7]  + '</td>';
+              tableCollateralsHeader += '<td>' + data.loanData.reportTable[item][6]  + '</td>';
+              tableCollateralsHeader += '<td>' + data.loanData.reportTable[item][5]  + '</td>';
+              tableCollateralsHeader += '<td>' + data.loanData.reportTable[item][4]  + '</td>';
+              tableCollateralsHeader += '<td>' + data.loanData.reportTable[item][3]  + '</td>';
+              tableCollateralsHeader += '<td>' + data.loanData.reportTable[item][2]  + '</td>';
+              tableCollateralsHeader += '<td>' + data.loanData.reportTable[item][1]  + '</td>';
+              tableCollateralsHeader += '<td>' + data.loanData.reportTable[item][0]  + '</td>';
+              tableCollateralsHeader += '</tr>';
+            } else {
+              tableCollaterals += '<tr>';
+              tableCollaterals += '<td>' + data.loanData.reportTable[item][7]  + '</td>';
+              tableCollaterals += '<td>' + data.loanData.reportTable[item][6]  + '</td>';
+              tableCollaterals += '<td>' + data.loanData.reportTable[item][5]  + '</td>';
+              tableCollaterals += '<td>' + data.loanData.reportTable[item][4]  + '</td>';
+              tableCollaterals += '<td>' + data.loanData.reportTable[item][3]  + '</td>';
+              tableCollaterals += '<td>' + data.loanData.reportTable[item][2]  + '</td>';
+              tableCollaterals += '<td>' + data.loanData.reportTable[item][1]  + '</td>';
+              tableCollaterals += '<td>' + data.loanData.reportTable[item][0]  + '</td>';
+              tableCollaterals += '</tr>';
+            }
+
+            i++;
+
+          });
+          $(tableCollateralsHeader).appendTo( $('#Collaterals thead') );
+          $(tableCollaterals).appendTo( $('#Collaterals tbody') );
+
+          $.each(data.loanAttrs, function(i) {
+
+            if(typeof data.loanAttrs[i].optionAttributeValues == 'undefined' && typeof data.loanAttrs[i].values != 'undefined' ) {
+              $('#' + data.loanAttrs[i].name).text(data.loanAttrs[i].values[0].value);
+            } else if(typeof data.loanAttrs[i].optionAttributeValues != 'undefined' && typeof data.loanAttrs[i].values != 'undefined') {
+              var selected = parseInt(data.loanAttrs[i].values[0].value);
+              $.each(data.loanAttrs[i].optionAttributeValues, function(j){
+                if(data.loanAttrs[i].optionAttributeValues[j].optionAttributeValueID === selected) {
+                  $('#' + data.loanAttrs[i].name).text(i18n['SELECT_OPTIONS'][data.loanAttrs[i].optionAttributeValues[j].value]);
+                }
+              });
+            }
+          });
+
+
+          $('#theoreticalSpitzerPayment').text(addCommasToInteger(data.reportData.shpitzerMonthlyPayment));
+          //must be rounded
+          $('#weightedDebtToYearlyIncomeRate').text(data.reportData.ltvData.yearlyLTVWeighted);
+          $('#debtToYearlyIncomeRate').text(data.reportData.ltvData.yearlyLTV);
+          $('#interest').text('P'+data.loanData.interesetPayment + '%');
+          //third page/////////////////////////////////////////////////
+          $.each(data.customerData, function(i) {
+            if(typeof data.customerData[i].optionAttributeValues == 'undefined' && typeof data.customerData[i].values != 'undefined' ) {
+              $('#' + data.customerData[i].name).text(data.customerData[i].values[0].value)
+            } else if(typeof data.customerData[i].optionAttributeValues != 'undefined' && typeof data.customerData[i].values != 'undefined') {
+              var selected = parseInt(data.customerData[i].values[0].value);
+              $.each(data.customerData[i].optionAttributeValues, function(j){
+                if(data.customerData[i].optionAttributeValues[j].optionAttributeValueID === selected) {
+                  $('#' + data.customerData[i].name).text(i18n['SELECT_OPTIONS'][data.customerData[i].optionAttributeValues[j].value]);
+                }
+              });
+            }
+
+
+            //Для всяких костылей, типа переформатирования даты
+            switch (data.customerData[i].name) {
+              case 'BirthDate': {
+                if(typeof data.customerData[i].values != 'undefined') {
+                  var tmpArray = data.customerData[i].values[0].value.split('-');
+                  $('#' + data.customerData[i].name).text( tmpArray[0] + '-' + tmpArray[1] + '-' + tmpArray[2]);
+                }
+              }
+                break;
+
+              case 'MonthlyLoanPaymentsSize':
+              case 'EstateLiabilitiesSize':
+              case 'CarLiabilitiesSize':
+              case 'TotalDebt':
+              case 'AlimonyGivenSize':
+              case 'AlimonyReceivedSize':
+              case 'VehicleNumber': {
+                if(typeof data.customerData[i].values != 'undefined') {
+                  $('#' + data.customerData[i].name).text( addCommasToInteger(parseInt(data.customerData[i].values[0].value)));
+                } else {
+                  $('#' + data.customerData[i].name).text('0');
+                }
+              }
+                break;
+
+              case 'BankPrints':
+              case 'Salary':
+              case 'SpouseSalary':
+              case 'IDDocument':
+              case 'CreditHistoryReport':
+              case 'BankAccountOwnershipForm':
+              case 'SurplusSummary':
+              case 'OtherDocument':
+              case 'BankID':
+              case 'HaveCreditHistoryReport': {
+                $('#' + data.customerData[i].name).text( ((typeof data.customerData[i].values != 'undefined') && data.customerData[i].values[0].value != "False" ) ? 'קיים': 'לא קיים' );
+              }
+                break;
+
+              case 'OtherInfo': {
+                if(typeof data.customerData[i].values != 'undefined') {
+                  $('#' + data.customerData[i].name).text( data.customerData[i].values[0].value);
+                } else {
+                  $('#' + data.customerData[i].name).text('ריק');
+                }
+              }
+                break;
+
+              case 'PersonalIncome':
+              case 'HousingValue':
+              case 'FinancialAssetsValue': {
+                if(typeof data.customerData[i].values  != 'undefined') {
+                  $('#' + data.customerData[i].name).text(addCommasToInteger(parseInt(data.customerData[i].values[0].value)));
+                }
+              }
+                break;
+
+              case 'RedLightNote': {
+                var value = '';
+
+                if(typeof data.customerData[i].values != 'undefined' && data.customerData[i].values[0].value.trim().length > 0) {
+                  value = i18n['SELECT_OPTIONS']['Yes'];
+                } else {
+                  value = i18n['SELECT_OPTIONS']['No'];
+                }
+
+                $('#' + data.customerData[i].name).text(value);
+              }
+                break;
+
+            }
+          });
+
+          $.each(data.accountAttrs, function(i) {
+            if(typeof data.accountAttrs[i].optionAttributeValues == 'undefined' && typeof data.accountAttrs[i].values != 'undefined' ) {
+              $('#' + data.accountAttrs[i].name).text(data.accountAttrs[i].values[0].value);
+            } else if(typeof data.accountAttrs[i].optionAttributeValues != 'undefined' && typeof data.accountAttrs[i].values != 'undefined') {
+              var selected = parseInt(data.accountAttrs[i].values[0].value);
+              $.each(data.accountAttrs[i].optionAttributeValues, function(j){
+                if(data.accountAttrs[i].optionAttributeValues[j].optionAttributeValueID === selected) {
+                  $('#' + data.accountAttrs[i].name).text(i18n['SELECT_OPTIONS'][data.accountAttrs[i].optionAttributeValues[j].value]);
+                }
+              });
+            }
+          });
+
+          $('#decreaseRate').text(data.reportData.fundData.decreaseRate);
+          $('#weightedFund').text(addCommasToInteger(data.reportData.fundData.weightedFund));
+          $('#percentFreeFund').text(data.reportData.fundData.percentFreeFund);
+          $('#freeFund').text(addCommasToInteger(data.reportData.fundData.freeFund));
+          $('#safe').text(addCommasToInteger(data.investorData.securitySize));
+          $('#InvestmentChannel').text(i18n['SELECT_OPTIONS'][data.investorData.fundCategoryStringValue]);
+          setTimeout(function(){
+
+            $('#FamilyIncome').text(addCommasToInteger($('#FamilyIncome').text()));
+            $('#PhoneNumber').text(phoneMask($('#PhoneNumber').text()));
+          }, 0);
+        },
+        error: function(e) {
+          console.log('errors', e);
+        },
+        async:false
+      })
+    });
+
+
+    var addCommasToInteger = function(value) {
+      return value.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+    };
+    var phoneMask = function(value) {
+      return value.slice(0, 3) + '-' + value.slice(3, 10);
+    };
+
+    function base64_decode(c){0<=c.indexOf("=")&&(c=c.substr(0,c.indexOf("=")));for(var k=0,d=0,b,l,e,g,f=0,a,h,m="";k<c.length;++k){l="="==c.charAt(k)?0:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".indexOf(c.charAt(k));d=(d+6)%8;if(6!=d){b+=l>>d;if(0==f)g=!0,h=0,e=1,128>b&&(e=0,h=b&64,g=!1);else if(128!=(b&192))return!1;for(a=32;g&&0<a;a>>=1)b&a?++e:g=!1;g||(a=6+6*f-e,6<a&&(a=6),a&&(h+=b%(1<<a)<<6*(e-f)));f==e?(m+=String.fromCharCode(h),f=0):++f}b=d?l%(1<<d)<<8-d:0}return m}
+  </script>
+</body>
+</html>

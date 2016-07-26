@@ -1,0 +1,209 @@
+{
+  "STEP": {
+    "REGISTRATION": "Registration",
+    "DETAILS": "User Details",
+    "SALARY": "Salary",
+    "UPLOAD_DOCUMENTS": "Upload Documents",
+    "VERIFICATION": "Verification",
+    "GETTINGLOAN": "Getting Loan"
+  },
+
+  "REGISTRATION": {
+    "FIRST_NAME": "First Name:",
+    "LAST_NAME": "Last Name:",
+    "EMAIL": "Email:",
+    "PASSWORD": "Password:",
+    "REPEAT_PASSWORD": "Repeat password:",
+    "CHANGE_PASSWORD": "Change password",
+    "REGISTRATION": "Registration",
+    "TERMS_AND_CONDITIONS": "Terms & conditions",
+    "I_ACEPT": "I accept "
+  },
+  "LOGIN": {
+    "FORGOT_PASSWORD": "Forgot password",
+    "REGISTRATION": "Registration"
+  },
+  "BUTTONS": {
+    "LOGIN": "Login",
+    "LOGOUT": "Logout",
+    "REGISTRATION": "Registration",
+    "COMPLETE": "Complete",
+    "SKIP": "Skip",
+    "UPDATE": "Update",
+    "SAVE_AND_PROCEED": "Save and continue",
+    "BACK": "Back",
+    "BACK_TO_SITE": "Back to Credito",
+    "BROWSE": "Browse"
+  },
+  "SEARCH": {
+    "ENTER_CUSTOMER_ID": "Enter customer ID",
+    "INCORRECT_ID": "Incorrect ID. User not found.",
+    "STATUS": "Status",
+    "FillInfo": "Details filling",
+    "ApproveInfo": "Checking by Credito",
+    "LoanReady": "Ready for Loan"
+  },
+  "USER_DETAILS": {
+    "HELLO_USER": "Hello, ",
+    "PERSONAL_INFO": "Personal Info:",
+    "CONECTIVITY_DETAILS": "Connectivity details:",
+    "FIRST_NAME": "First Name:",
+    "LAST_NAME": "Last Name:",
+    "ID_NUMBER": "ID Number:",
+    "EMAIL": "Email:",
+    "PHONE": "Phone:",
+    "ADDRESS": "Address:",
+    "COUNTRY": "Country:",
+    "CITY": "City:",
+    "REGION": "Region:",
+    "STREET": "Street:",
+    "BUILDING_NUMBER": "Building number:",
+    "APARTMENT_FLOOR": "Apartment floor:",
+    "APARTMENT_NUMBER": "Apartment number:",
+    "MARTIAL_STATUS" : "Martial status:",
+    "CHILDREN_NUMBER": "Children number:",
+    "PERSONS_INHOUSE": "Persons in house",
+    "GENDER" : "Gender",
+    "YEAR_OF_BIRTH": "Year of birth:",
+
+    "INCOME_AND_ASSETS": "Income & Assets:",
+    "TOTAL_FAMILY_INCOME": "Total family income:",
+    "HOUSING_OWNERSHIP": "Housing ownership:",
+    "VEHICLE_OWNERSHIP": "Vehicle ownership:",
+    "PERSONAL_INCOME": "Personal income:",
+    "TOTAL_DEBTS": "Total debts:",
+
+    "EMPLOYMENT": "Employment:",
+    "EDUCATION_AND_EMPLOYMENT": "Education & Employment:",
+    "PROFESSION": "Profession",
+    "EDUCATION_STATUS": "Education status:",
+    "EMPLOYMENT_HISTORY": "Employment history",
+    "YEARS_IN_THE_JOB": "(Years in the job):",
+    "EMPLOYMENT_STATUS": "Employment Status:",
+    "EDUCATION_MAJOR": "Education major:",
+
+    "COMPANY_NAME": "Company name:",
+    "COMPANY_ID": "Company #:"
+  },
+  "UPLOAD": {
+    "SAVE": "Save",
+    "EDIT": "Edit",
+    "UPLOAD_DOCUMENTS": "Upload documents",
+    "SIGN_UP": "Sign up",
+    "VERIFYING": "Verification by Credito",
+    "CALCULATE_YOUR_RATING": "Calculate your ratinig",
+    "ID": "ID",
+    "FIRST_SALARY": "1st Salary",
+    "SPOUSE_SALARY": "Last spouse salary",
+    "SECOND_SALARY": "2nd Salary",
+    "THIRD_SALARY": "3d Salary",
+    "THREE_MONTH_OF_BANK_ACCOUNT": "3Month of bank account",
+    "COMPLETE_MESSAGE": "Thanks for uploading all the data, our team will check it and back to you",
+    "APPROVED": "Approved",
+    "PENDING": "Pending"
+  },
+  "CALCULATION" : {
+    "ID": "ID",
+    "SECURITY" : "Security",
+    "LOAN_SUM" : "Loan sum",
+    "LOAN_TYPE" : "Loan type",
+    "LOAN_LENGTH" : "Loan length",
+    "LOAN_REASON" : "Loan reason",
+    "LIQUIDITY_LEVEL" : "Liquidity level",
+    "RISK_MEASURE" : "Risk measure",
+    "MONTHLY_DEPOSITS" : "Monthly deposits",
+    "INTEREST" : "Interest",
+    "DURATION" : "Duration",
+    "MONTHLY_PAYMENT" : "Monthly payment"
+  },
+  "MESSAGE": {
+    "ApproveInfo": "Approve info by Credito",
+    "LoanReady": "Ready for loan",
+    "PASSWORD_RESET_HEAD": "תהליך של איפוס סיסמא כבר התחיל",
+    "PASSWORD_RESET_BODY": "אנא בדוק את הדוא\"ל שלך כדי להמשיך ...",
+    "PASSWORD_PROCESS_HEAD": "תהליך של איפוס סיסמא",
+    "PASSWORD_PROCESS_BODY": "בתהליך .."
+  },
+  "ERRORS" : {
+    "USER_DETAILS": {
+      "FIRST_NAME": "First name is empty or has less then 2 characters",
+      "LAST_NAME": "Last name is empty or has less then 2 characters",
+      "ID_NUMBER": "ID number is empty",
+      "EMAIL": "Email is empty or invalid",
+      "CITY": "City is empty",
+      "REGION": "Region is empty",
+      "STREET": "Street is empty",
+      "BUILDING_NUMBER": "Building number is empty",
+      "APARTMENT_FLOOR": "Apartment floor is empty",
+      "APARTMENT_NUMBER": "Apartment number is empty",
+      "CHILDREN": "Children field is empty",
+      "TOTAL_FAMILY_INCOME": "Field is empty",
+      "PERSONAL_INCOME": "Field is empty",
+      "TOTAL_DEBTS": "Field is empty"
+    },
+    "REGISTRATION": {
+      "EMAIL": "Email is empty or invalid",
+      "PASSWORD": "Password must consist of min 6 symbols",
+      "PASSWORDS_NOT_MATCH": "Passwords not match"
+    },
+    "NO_INTERNET_CONNECTION": "Connection error. Check your Internet connection.",
+    "FIELD_IS_REQUIRED": "This field is required",
+    "NUMBER_MAX_LIMIT": "The amount must not be bigger {{limit}}",
+    "NUMBER_MIN_LIMIT": "The amount must not be smaller {{limit}}",
+    "NUMBER_REQUIRED": "The number is required",
+    "REQUEST_ERROR": "Some error occured",
+    "NOT_ENOUGH_FUNDS": "Not enough funds to invest specified sum",
+    "LOAN_AMOUNT_OVERFLOW": "Invested amount exceeds the loan amount"
+  },
+
+  "SELECT_OPTIONS": {
+    "Israel": "Israel",
+    "USA": "USA",
+    "Germany": "Germany",
+    "UK": "UK",
+
+    "Single": "Single",
+    "Married": "Married",
+    "Divorced": "Divorced",
+    "Widowed": "Widowed",
+
+    "Male": "Male",
+    "Female": "Female",
+
+    "EconomicsAndCapitalMarkets": "EconomicsAndCapitalMarkets",
+    "MedicalAndHealth": "MedicalAndHealth",
+    "Administration": "Administration",
+    "ComputersAndNetworks": "ComputersAndNetworks",
+
+    "Elementary": "Elementary",
+    "HighSchool": "HighSchool",
+    "BA": "BA",
+    "MA": "MA",
+    "PHD": "PHD",
+    "Engineer": "Engineer",
+    "Handesai": "Handesai",
+
+    "FullJob": "FullJob",
+    "PartTimeJob": "PartTimeJob",
+    "Freelancer": "Freelancer",
+    "Student": "Student",
+    "Unemployed": "Unemployed",
+
+    "ExactScience": "ExactScience",
+    "Economics": "Economics",
+    "ComputerScience": "ComputerScience",
+    "Psychology": "Psychology",
+
+    "Yes": "Yes",
+    "No": "No",
+
+    "Shpitzer": "Shpitzer",
+    "Bullet": "Bullet",
+    "Baloon": "Balloon",
+    "FixedFund": "FixedFund",
+
+    "Bond": "Bond",
+    "Shares": "Shares",
+    "Mixed": "Mixed"
+  }
+}

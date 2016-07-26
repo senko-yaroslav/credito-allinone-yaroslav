@@ -1,1 +1,141 @@
-<!DOCTYPE html> <html class=no-js> <head> <meta charset=utf-8> <title translate>Credito All In One</title> <meta name=description content="Credito All In One"> <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel=stylesheet href=styles/4803a408.vendor.css> <link rel=stylesheet href=styles/a2bdb383.main.css> <link rel=stylesheet href=theme/rtl-theme.css> <link rel=stylesheet href=theme/rtl-theme-elements.css> <link rel=stylesheet href=theme/rtl-theme-blog.css> <link rel=stylesheet href=theme/rtl-theme-shop.css> <link rel=stylesheet href=theme/theme-animate.css> <link rel=stylesheet href=theme/default.css> <link rel=stylesheet href=theme/custom.css> <link rel=stylesheet href=theme/bootstrap-rtl.min.css> <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel=stylesheet type=text/css>  <body class="sticky-menu-active always-sticky ng-cloak" ng-cloak> <!-- Modal --> <div class="modal fade" id=sessionExpired tabindex=-1 role=dialog aria-labelledby=myModalLabel> <div class=modal-dialog role=document> <div class=modal-content> <div class=modal-header> <button type=button class=close data-dismiss=modal aria-label=Close><span aria-hidden=true>&times;</span></button> <h4 class=modal-title id=myModalLabel>Session expired</h4> </div> <div class=modal-body> <h5>Please login again</h5> </div> </div> </div> </div> <div class=body> <div class=container-fluid> <credito-header></credito-header> <div class=header-header ng-controller=HeaderController> <div class="col-lg-1 col-md-2 col-sm-2 col-xs-12"> <div class=user-info> <div class=logout> <a class="btn btn-primary ng-cloak" ng-cloak ng-show=showLogoutButton() href=#/logout>{{'BUTTONS.LOGOUT' | translate}}</a> <a class="btn btn-icon btn-change-pass btn-primary ng-cloak" ng-cloak ng-show=showLogoutButton() href=#/password/change>{{'REGISTRATION.CHANGE_PASSWORD' | translate}}</a> </div> </div> </div> <div class="col-lg-5 col-md-4 col-sm-4 col-xs-12" style="position: relative"> <h4 class="col-lg-12 col-md-12 col-xs-12" ng-show=showLogoutButton()>{{'USER_DETAILS.HELLO_USER' | translate}} <span class=user-name>{{userDetails.firstName + ' ' + userDetails.lastName}}</span></h4> </div> <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" ng-show=investorLogoLink id=investorLogoLink> <img class=logo src="{{investorLogoLink}}"> </div> <user-status-modal show=user.message status=user.status></user-status-modal> </div> <div class=main-view> <div class=col-md-2> <credito-sidemenu> </div> <div class=col-md-9> <div ng-view></div> </div> </div> <credito-footer></credito-footer> <script src=scripts/fb407ba5.vendor.js></script> <script src=vendors/Bootstrap/ui-bootstrap-tpls-0.11.0.js></script> <script src=bower_components/bootstrap-datepicker/dist/locales/bootstrap-datepicker.he.min.js></script> <script src=scripts/1c23c4c4.main.js></script> </div> </div>  
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title translate>Credito All In One</title>
+    <meta name="description" content="Credito All In One">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+    <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
+    <link rel="stylesheet" href="bower_components/seiyria-bootstrap-slider/dist/css/bootstrap-slider.css" />
+    <link rel="stylesheet" href="bower_components/pickadate/lib/themes/default.css" />
+    <link rel="stylesheet" href="bower_components/pickadate/lib/themes/default.date.css" />
+    <link rel="stylesheet" href="bower_components/pickadate/lib/themes/default.time.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" />
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="theme/rtl-theme.css">
+    <link rel="stylesheet" href="theme/rtl-theme-elements.css">
+    <link rel="stylesheet" href="theme/rtl-theme-blog.css">
+    <link rel="stylesheet" href="theme/rtl-theme-shop.css">
+    <link rel="stylesheet" href="theme/theme-animate.css">
+    <link rel="stylesheet" href="theme/default.css">
+    <link rel="stylesheet" href="theme/custom.css">
+    <link rel="stylesheet" href="theme/bootstrap-rtl.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
+
+  </head>
+  <body class="sticky-menu-active always-sticky ng-cloak" ng-cloak>
+  <!-- Modal -->
+  <div class="modal fade" id="sessionExpired" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Session expired</h4>
+              </div>
+              <div class="modal-body">
+                  <h5>Please login again</h5>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="body">
+    <div class="container-fluid">
+      <credito-header></credito-header>
+      <div class="header-header" ng-controller="HeaderController">
+
+        <div class="col-lg-1 col-md-2 col-sm-2 col-xs-12">
+          <div class="user-info" >
+            <div class="logout">
+              <a class="btn btn-primary ng-cloak" ng-cloak ng-show="showLogoutButton()" href="#/logout">{{'BUTTONS.LOGOUT' | translate}}</a>
+              <a class="btn btn-icon btn-change-pass btn-primary ng-cloak" ng-cloak ng-show="showLogoutButton()"
+                 href="#/password/change">{{'REGISTRATION.CHANGE_PASSWORD' | translate}}</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5 col-md-4 col-sm-4 col-xs-12" style="position: relative">
+          <h4 class="col-lg-12 col-md-12 col-xs-12" ng-show="showLogoutButton()">{{'USER_DETAILS.HELLO_USER' | translate}} <span class="user-name">{{userDetails.firstName + ' ' + userDetails.lastName}}</span></h4>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" ng-show="investorLogoLink" id="investorLogoLink">
+            <img class="logo" src="{{investorLogoLink}}" />
+        </div>
+
+
+        <user-status-modal show="user.message" status="user.status"></user-status-modal>
+      </div>
+
+      <div class="main-view">
+        <div class="col-md-2">
+          <credito-sidemenu />
+        </div>
+        <div class="col-md-9">
+          <div ng-view></div>
+        </div>
+      </div>
+
+      <credito-footer></credito-footer>
+
+      <!-- build:js(.) scripts/vendor.js -->
+      <!-- bower:js -->
+      <script src="bower_components/jquery/dist/jquery.js"></script>
+      <script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+      <script src="bower_components/angular/angular.js"></script>
+      <script src="bower_components/angular-resource/angular-resource.js"></script>
+      <script src="bower_components/angular-route/angular-route.js"></script>
+      <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+      <script src="bower_components/angular-translate/angular-translate.js"></script>
+      <script src="bower_components/underscore/underscore.js"></script>
+      <script src="bower_components/angular-validation/dist/angular-validation.js"></script>
+      <script src="bower_components/angular-load/angular-load.js"></script>
+      <script src="bower_components/angular-translate-loader-url/angular-translate-loader-url.js"></script>
+      <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+      <script src="bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+      <script src="bower_components/angular-translate-storage-local/angular-translate-storage-local.js"></script>
+      <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+      <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
+      <script src="bower_components/seiyria-bootstrap-slider/dist/bootstrap-slider.js"></script>
+      <script src="bower_components/angular-bootstrap-slider/slider.js"></script>
+      <script src="bower_components/lodash/lodash.js"></script>
+      <script src="bower_components/restangular/dist/restangular.js"></script>
+      <script src="bower_components/moment/moment.js"></script>
+      <script src="bower_components/pickadate/lib/picker.js"></script>
+      <script src="bower_components/pickadate/lib/picker.date.js"></script>
+      <script src="bower_components/pickadate/lib/picker.time.js"></script>
+      <script src="bower_components/jquery.scrollTo/jquery.scrollTo.js"></script>
+      <script src="bower_components/jquery.ajax.binary/jquery.ajax.binary.js"></script>
+      <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
+      <script src="bower_components/credito.core/core.directives.js"></script>
+      <script src="bower_components/credito.core/core.services.js"></script>
+      <script src="bower_components/credito.core/core.filters.js"></script>
+      <script src="bower_components/file-saver.js/FileSaver.js"></script>
+      <!-- endbower -->
+      <!-- endbuild -->
+
+      <!-- begin:Vendors scripts -->
+      <script src="vendors/Bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+      <script src="bower_components/bootstrap-datepicker/dist/locales/bootstrap-datepicker.he.min.js"></script>
+
+      <!-- build:js({app,.tmp}) scripts/main.js -->
+      <script src="scripts/main.js"></script>
+      <script src="scripts/controllers.js"></script>
+      <script src="scripts/services.js"></script>
+      <script src="scripts/directives.js"></script>
+      <script src="scripts/constants.js"></script>
+      <!-- endbuild -->
+
+    </div>
+  </div>
+</body>
+</html>

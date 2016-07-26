@@ -1,0 +1,111 @@
+<div id="basket" class="blue-theme">
+    <div class="row-eq-height">
+        <div class="col-md-3  col-xs-2">
+            <div class="well well-lg text-center lead">
+                <div>{{'PURCHASING_GROUP.PORTFOLIO_VALUE' | translate}}</div>
+                <div><span>{{portfolioInfo.portfolioValue | number : fractionSize}}</span> ₪</div>
+            </div>
+        </div>
+        <div class="col-md-3  col-xs-2">
+            <div class="well well-lg text-center lead">
+                <div>{{'PURCHASING_GROUP.PORTFOLIO_DURATION' | translate}}</div>
+                <div><span>{{portfolioInfo.portfolioDuration | number : fractionSize}}</span> </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-xs-2">
+            <div class="well well-lg text-center lead">
+                <div>{{'PURCHASING_GROUP.NUMBER_OF_BORROWERS' | translate}}</div>
+                <div>{{portfolioInfo.borrowerCount | number : fractionSize}}</div>
+            </div>
+        </div>
+        <div class="col-md-3 col-xs-2">
+            <div class="well well-lg text-center lead">
+                <div>{{'PURCHASING_GROUP.REMAINING_FUND_INTEREST' | translate}}</div>
+                <div><span>{{portfolioInfo.remainingFund | number : fractionSize}}</span> ₪</div>
+            </div>
+        </div>
+        <div class="col-md-3 col-xs-2">
+            <div class="well well-lg text-center lead">
+                <div>{{'PURCHASING_GROUP.AVERAGE_INTEREST' | translate}}</div>
+                <div style="direction: ltr">{{portfolioInfo.averageInterest | number : fractionSize}} %</div>
+            </div>
+        </div>
+    </div>
+    <div class="">
+        <div class="col-lg-8 col-md-12" id="projected-payments-chart" projected-payments-chart></div>
+        <div class="col-lg-4 col-md-6 loan-summary">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h2>{{'PURCHASING_GROUP.LOANS_SUMMARY' | translate}}</h2>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-striped">
+                        <tbody>
+                        <tr>
+                            <td>{{'PURCHASING_GROUP.LOANS_AMOUNT_COUNT' | translate}}</td>
+                            <th><span>{{statusSummary.loansSummary.inProcessLoansCount | number : fractionSize}}</span></th>
+                        </tr>
+                        <!--tr>
+                            <td>{{'PURCHASING_GROUP.LOANS_AMOUNT_SUM' | translate}}</td>
+                            <th>₪ <span>{{statusSummary.loansSummary.inProcessLoansAmountSum | number : fractionSize}}</span></th>
+                        </tr-->
+                        <tr>
+                            <td>{{'PURCHASING_GROUP.RECEIVED_FUND' | translate}}</td>
+                            <th>₪ <span>{{statusSummary.loansSummary.recievedFundAmount | number : fractionSize}}</span></th>
+                        </tr>
+                        <tr>
+                            <td>{{'PURCHASING_GROUP.FINISH_LOANS' | translate}}</td>
+                            <th><span>{{statusSummary.loansSummary.finishedLoansCount | number : fractionSize}}</span></th>
+                        </tr>
+                        <tr>
+                            <td>{{'PURCHASING_GROUP.FINISH_LOANS_SUM' | translate}}</td>
+                            <th>₪ <span>{{statusSummary.loansSummary.finishedLoansAmountSum | number : fractionSize}}</span></th>
+                        </tr>
+                        <tr>
+                            <td>{{'PURCHASING_GROUP.LAONS_DELAY' | translate}}</td>
+                            <th>{{statusSummary.loansSummary.delayedLoansCount | number : fractionSize}}</th>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="current-picture-panels-list">
+        <div class="col-lg-4 col-md-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h2>{{'PURCHASING_GROUP.LTV_LIQUID' | translate}}</h2>
+                </div>
+                <div class="panel-body">
+                    <div ltv-liquid-loans id="ltv-liquid-loans"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h2>{{'PURCHASING_GROUP.LTV_NON_LIQUID' | translate}}</h2>
+                </div>
+                <div class="panel-body">
+
+                    <div ltv-non-liquid-loans id="ltv-non-liquid-loans"></div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h2>{{'PURCHASING_GROUP.INDEX_LINKED' | translate}}</h2>
+                </div>
+                <div class="panel-body">
+                    <div id="index-linked-chart" index-linked-chart></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

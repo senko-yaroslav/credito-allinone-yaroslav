@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Promissory Note</title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <style type="text/css">
+        html {
+            direction: rtl;
+        }
+
+        body{
+            margin-top: 20px;
+        }
+        .container {
+            text-align: center;
+        }
+
+        .c {
+            text-align: center;
+        }
+        .r {
+            text-align: right;
+        }
+        .l {
+            text-align: left;
+        }
+        .cb {
+            text-align: center;
+            font-weight: bold;
+        }
+        .b {
+            font-weight: bold;
+        }
+        .u {
+            text-decoration: underline;
+        }
+        table {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            vertical-align: top;
+        }
+        table td {
+            vertical-align: top;
+            padding: 15px;
+        }
+        table tr td.col-2 {
+            width: 30%;
+        }
+        .underline {
+            border-bottom: 1px solid #000;
+        }
+        table.footer td div {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="content container">
+        <h4 class="cb">שטר חוב לבטחון בלבד (לא סחיר)</h4>
+        <br/>
+        <h4 class="u">צמוד למדד המחירים לצרכן</h4>
+
+        <table class="r">
+            <tr>
+                <td class="col-1">
+                    <div></div>מס' 458
+                    <br/><br/>
+                    <div>
+                        שנחתם תל אביב ביום  <b id="signingDay"></b> בחודש  <b id="signingMonth"></b> שנה <b id="signingYear"></b><br/>
+                        אני מתחייב/ת לשלם נגד שטר זה לפקודת בית <span class="u">השקעות</span><br/>
+                        (במילים): _______________ בתוספת הפרשי הצמדה כמפורט להלן:
+                    </div>
+                    <br/><br/>
+                    <div>
+                        סכום שטר זה צמוד למדד המחירים לצרכן כמפורט להלן: <br/>
+                        "<b>המדד הבסיסי</b>" - מדד המחירים לצרכן הידוע ביום4/5/16 הינו _____98.1______. <br/>
+                        "<b>המדד החדש</b>" - מדד המחירים לצרכן הידוע ביום פירעונו בפועל של שטר זה.
+                    </div>
+                    <br/><br/>
+                    <div>
+                        אם במועד פירעונו בפועל של שטר זה יהיה המדד החדש גבוה מהמדד הבסיסי, יוגדל סכום השטר באופן יחסי <br/>
+                        למידת עלייתו של המדד החדש, לעומת המדד הבסיסי בצירוף מס ערך מוסף, כשיעורו על פי דין באותו המועד.
+                    </div>
+                    <br/><br/>
+
+                    <div>התמורה התקבלה ב __הלוואה________________________________</div>
+                    <div>מקום התשלום _____________________________________</div>
+                    <br/><br/><br/>
+                    <div style="width: 40%;height: 70px;margin: -8% 45% 0 0;">
+                        <div class="l" style="margin: 30px 0 0 0">&nbsp;
+                            <img style="width: 70%;" id="PromissoryNoteSignature" />
+                            <div style="text-align: center">______________________________</div>
+                            <div style="text-align: center">חתימות עושי השטר 	</div>
+
+                        </div>
+                    </div>
+                    <div>
+
+                        <table class="footer">
+                            <tr>
+                                <td>
+                                    <div class="b">במידה ומקום התשלום הוא בבנק - יש למלא:</div>
+                                    <div>שם הבנק: _________________________</div>
+                                    <div>שם הסניף: ________________________</div>
+                                    <div>מס' חשבון: ________________________</div>
+                                </td>
+                                <td>
+                                    <div class="b">שמות עושי השטר:</div>
+                                    <div>שם: ___<span id="FirstName"></span>, <span id="LastName"></span>__ ת.ז. __<span id="IDNumber"></span></div>
+                                    <div>כתובת: <span id="City"></span>, <span id="Street"></span> <span id="BuildingNumber"></span></div>
+                                    <div>שם: ____________________ת.ז._________________</div>
+                                    <div>כתובת: ______________________________________</div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+
+                </td>
+                <td class="col-2">
+                    <div>סך <span class="u" id="LoanAmount"></span> ₪</div>
+                    <br/><br/>
+                    <div class="cb">ערבות אוואל</div>
+                    <div>
+                        אני ערב ערבות אוואל לתשלום שטר זה
+                        ע"י עושה השטר. ערבותי זו תעמוד בתוקף עד לתם תקופת השכירות ו/או האופציה ו/או עד לפינוי המושכר ע"י השוכר המאוחר מביניהם.
+                    </div>
+                    <br/><br/>
+                    <div class="b">שמות הערבים:</div>
+                    <div>___________ת.ז. </div>
+                    <div>כתובת:</div>
+
+                    <br/><br/><br/>
+                    <img style="width: 70%;" id="PromissoryNoteSignature2" />
+                    <div class="underline"></div>
+                    <div class="c">חתימה</div>
+
+                    <br/><br/>
+                    <div>2. ____________  ת.ז. ___________</div>
+                    <div>כתובת: _______________________</div>
+
+                    <br/><br/><br/>
+                    <div class="underline"></div>
+                    <div class="c">חתימה</div>
+
+                    <br/><br/>
+                    <div>3. ______________ת.ז.____________</div>
+                    <div>כתובת: _________________________</div>
+
+                    <br/><br/><br/>
+
+                    <div class="underline"></div>
+                    <div class="c">חתימה</div>
+                </td>
+            </tr>
+        </table>
+
+
+        <br/>
+        <br/>
+        <br/>
+        <br/><br/><br/><br/>
+
+
+
+    </div>
+</div>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+        $(function () {
+            var token = window.location.href.split('?')[1].split('=')[1];
+            var sigData;
+
+            $.ajax({
+                'url': 'https://credito.co.il/b2cpreprod/api/borrower/documents/templates/data/loanSigning',
+                method: "GET",
+                headers: {
+                    "Authorization": "Bearer " + base64_decode(token)
+                },
+                data: [],
+                success: function (response) {
+                    sigData = response;
+
+                    console.log('sigData', sigData);
+
+                    $.each(sigData.loanAttrs, function(i) {
+
+                        if(typeof sigData.loanAttrs[i].optionAttributeValues == 'undefined' && typeof sigData.loanAttrs[i].values != 'undefined' ) {
+                            $('#' + sigData.loanAttrs[i].name).text(sigData.loanAttrs[i].values[0].value);
+                        } else if(typeof sigData.loanAttrs[i].optionAttributeValues != 'undefined' && typeof sigData.loanAttrs[i].values != 'undefined') {
+                            var selected = parseInt(sigData.loanAttrs[i].values[0].value);
+                            $.each(sigData.loanAttrs[i].optionAttributeValues, function(j){
+                                if(sigData.loanAttrs[i].optionAttributeValues[j].optionAttributeValueID === selected) {
+                                    $('#' + sigData.loanAttrs[i].name).text(sigData.loanAttrs[i].optionAttributeValues[j].value);
+                                }
+                            });
+                        }
+
+                    });
+
+                    $.each(sigData.customerData, function(i) {
+
+                        if(typeof sigData.customerData[i].optionAttributeValues == 'undefined' && typeof sigData.customerData[i].values != 'undefined' ) {
+
+
+                            if(sigData.customerData[i].name == 'PromissoryNoteSignature') {
+                                $('#' + sigData.customerData[i].name).attr({
+                                    src: sigData.customerData[i].values[0].value
+                                });
+
+                                $('#' + sigData.customerData[i].name + '2').attr({
+                                    src: sigData.customerData[i].values[0].value
+                                });
+                            } else {
+                                $('#' + sigData.customerData[i].name).text(sigData.customerData[i].values[0].value);
+                            }
+
+
+
+                        } else if(typeof sigData.customerData[i].optionAttributeValues != 'undefined' && typeof sigData.customerData[i].values != 'undefined') {
+                            var selected = parseInt(sigData.customerData[i].values[0].value);
+                            $.each(sigData.customerData[i].optionAttributeValues, function(j){
+                                if(sigData.customerData[i].optionAttributeValues[j].optionAttributeValueID === selected) {
+                                    $('#' + sigData.customerData[i].name).text(sigData.customerData[i].optionAttributeValues[j].value);
+                                }
+                            });
+                        }
+
+                    });
+
+                    var date = sigData.loanData.firstPaymentDate.split('T')[0].split('-');
+                        $('#signingYear').text(date[0]);
+                        $('#signingMonth').text(date[1]);
+                        $('#signingDay').text(date[2]);
+
+                    $('#LoanAmount').text(addCommasToInteger( $('#LoanAmount').text().split('.')[0] ));
+                    $('#LoanLenghtInMonths').text(sigData.loanData.loanLenghtInMonths);
+
+                },
+                error: function (e) {
+                    console.log('errors', e);
+                },
+                async: false
+            })
+        });
+
+
+    var addCommasToInteger = function (value) {
+        return value.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+    };
+    var phoneMask = function (value) {
+        return value.slice(0, 3) + '-' + value.slice(3, 10);
+    };
+
+    function base64_decode(c) {
+        0 <= c.indexOf("=") && (c = c.substr(0, c.indexOf("=")));
+        for (var k = 0, d = 0, b, l, e, g, f = 0, a, h, m = ""; k < c.length; ++k) {
+            l = "=" == c.charAt(k) ? 0 : "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".indexOf(c.charAt(k));
+            d = (d + 6) % 8;
+            if (6 != d) {
+                b += l >> d;
+                if (0 == f)g = !0, h = 0, e = 1, 128 > b && (e = 0, h = b & 64, g = !1); else if (128 != (b & 192))return !1;
+                for (a = 32; g && 0 < a; a >>= 1)b & a ? ++e : g = !1;
+                g || (a = 6 + 6 * f - e, 6 < a && (a = 6), a && (h += b % (1 << a) << 6 * (e - f)));
+                f == e ? (m += String.fromCharCode(h), f = 0) : ++f
+            }
+            b = d ? l % (1 << d) << 8 - d : 0
+        }
+        return m
+    }
+</script>
+</body>
+</html>

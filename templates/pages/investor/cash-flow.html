@@ -1,0 +1,88 @@
+<div id="basket" class="blue-theme">
+    <div class="row-eq-height">
+        <div class="col-md-3  col-xs-2">
+            <div class="well well-lg text-center lead">
+                <div>{{'PURCHASING_GROUP.PORTFOLIO_VALUE' | translate}}</div>
+                <div><span>{{portfolioInfo.portfolioValue | number : fractionSize}}</span> ₪</div>
+            </div>
+        </div>
+        <div class="col-md-3  col-xs-2">
+            <div class="well well-lg text-center lead">
+                <div>{{'PURCHASING_GROUP.PORTFOLIO_DURATION' | translate}}</div>
+                <div><span>{{portfolioInfo.portfolioDuration | number : fractionSize}}</span> </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-xs-2">
+            <div class="well well-lg text-center lead">
+                <div>{{'PURCHASING_GROUP.NUMBER_OF_BORROWERS' | translate}}</div>
+                <div>{{portfolioInfo.borrowerCount | number : fractionSize}}</div>
+            </div>
+        </div>
+        <div class="col-md-3 col-xs-2">
+            <div class="well well-lg text-center lead">
+                <div>{{'PURCHASING_GROUP.REMAINING_FUND_INTEREST' | translate}}</div>
+                <div><span>{{portfolioInfo.remainingFund | number : fractionSize}}</span> ₪</div>
+            </div>
+        </div>
+        <div class="col-md-3 col-xs-2">
+            <div class="well well-lg text-center lead">
+                <div>{{'PURCHASING_GROUP.AVERAGE_INTEREST' | translate}}</div>
+                <div style="direction: ltr">{{portfolioInfo.averageInterest | number : fractionSize}} %</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div id="cash-flow-chart" cash-flow-chart></div>
+    </div>
+
+
+    <div class="row-eq-height">
+        <div class="col-md-8">
+            <table class="table table-striped table-hover" style="max-width: none;">
+                <thead>
+                    <tr>
+                        <th>{{'CASH_FLOW.REMAINING_FUND' | translate}}</th>
+                        <th>{{'CASH_FLOW.FUND_PAY' | translate}}</th>
+                        <th>{{'CASH_FLOW.INTEREST_PAY' | translate}}</th>
+                        <th>{{'CASH_FLOW.CASH_FLOW_AMOUNT' | translate}}</th>
+                        <th>{{'CASH_FLOW.DATE' | translate}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="value in cashFlowModel.values">
+                       <td>{{value.remainingFund | number : fractionSize}}</td>
+                       <td>{{value.fundPay | number : fractionSize}}</td>
+                       <td>{{value.interestPay | number : fractionSize}}</td>
+                       <td>{{value.cashflowAmount | number : fractionSize}}</td>
+                       <td>{{value.date | date:'dd-MM-yyyy'}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-4">
+            <div id="totalCashFlow">
+                <div class="row rounded offset-btm-50">
+                    <h5>מתאריך {{cashFlowModel.dateFrom | date:'dd-MM-yyyy' }} ועד סוף ההלוואות</h5>
+
+                    <div class="">
+                        <div class="col-md-6">
+
+                            <div class="totalCashflow">
+                                <div>סה"כ תזרים</div>
+                                {{cashFlowModel.totalCashflow | number: fractionSize}} <span> ₪</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="totalFund">
+                                <div>סה"כ קרן</div>
+                                {{cashFlowModel.totalFund | number: fractionSize}} <span> ₪</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

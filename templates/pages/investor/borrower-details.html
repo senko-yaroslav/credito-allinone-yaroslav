@@ -1,0 +1,372 @@
+<div id="borrowerDetails">
+    <div class="">
+        <div class="">
+            <div class="">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs nav-justified" role="tablist">
+                    <li role="presentation" ng-click="getBorrowersDocuments()">
+                        <a href="#documents" aria-controls="documents" role="tab" data-toggle="tab">מסמכים</a>
+                    </li>
+
+                    <li role="presentation" class="borrowers-details active">
+                        <a href="#borrower_{{id}}" aria-controls="borrower_{{id}}" role="tab" data-toggle="tab">פרטים אישיים</a>
+                    </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane" id="documents">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul style="margin: 12px;">
+                                    <li ng-repeat="cat in files" style="margin: 12px 0">
+                                        {{'UPLOAD.' + cat.name | translate}}
+                                        <ul>
+                                            <li ng-repeat="file in cat.values" style="margin: 7px 0; overflow: hidden">
+                                                <a href="" class="glyphicon glyphicon-download" ng-click="downloadFile(file.attributeValueId, file.value)"></a>
+                                                <a href="" ng-click="previewFile(file.attributeValueId, file.value)" title="תצוגה מקדימה של המסמך" style="color: #337ab7;">{{file.value}}</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <br/>
+                                <back-button ng-click="historyBack()">{{'BUTTONS.BACK' | translate}}</back-button>
+                            </div>
+                            <div class="col-md-6">
+                                <iframe id="pdfRow" style="width: 100%; height:700px; overflow:hidden;" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                                <img id="imgRow" alt="" style="max-width: 550px;"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane active borrowers-details" id="borrower_{{id}}" style="direction: ltr">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="panel-group">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a ng-click="saveAccordionTabsState('PersonalInfo')" data-toggle="collapse" data-parent="#ConfigAccordion" href="#PersonalInfo">{{'USER_DETAILS.PERSONAL_INFO' | translate}}</a>
+                                            </h4>
+                                        </div>
+                                        <div id="PersonalInfo" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.FIRST_NAME' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{borrowerModel.userDetails.FirstName.value}}
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.LAST_NAME' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{borrowerModel.userDetails.LastName.value}}
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.ID_NUMBER' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{borrowerModel.userDetails.IDNumber.value}}
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.MARTIAL_STATUS' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{borrowerModel.userDetails.MaritalStatus}}
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.PERSONS_INHOUSE' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{borrowerModel.userDetails.PersonsInHouse.value}}
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.CHILDREN_NUMBER' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{borrowerModel.userDetails.ChildrenNumber.value}}
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.GENDER' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{borrowerModel.userDetails.Gender}}
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.YEAR_OF_BIRTH' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{borrowerModel.userDetails.BirthDate.value}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a ng-click="saveAccordionTabsState('ConectivityDetails')" data-toggle="collapse" data-parent="#ConfigAccordion" href="#ConectivityDetails">{{'USER_DETAILS.CONECTIVITY_DETAILS' | translate}}</a>
+                                            </h4>
+                                        </div>
+                                        <div id="ConectivityDetails" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.EMAIL' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{borrowerModel.userDetails.Email.value}}
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.PHONE' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{borrowerModel.userDetails.PhoneNumber.value}}
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.CITY' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{borrowerModel.userDetails.City.value}}
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.STREET' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{borrowerModel.userDetails.Street.value}}
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.BUILDING_NUMBER' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{borrowerModel.userDetails.BuildingNumber.value}}
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.APARTMENT_FLOOR' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{borrowerModel.userDetails.ApartmentFloor.value}}
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.APARTMENT_NUMBER' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{borrowerModel.userDetails.ApartmentNumber.value}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a ng-click="saveAccordionTabsState('Employment')" data-toggle="collapse" data-parent="#ConfigAccordion" href="#Employment">{{'USER_DETAILS.EMPLOYMENT' | translate}}</a>
+                                            </h4>
+                                        </div>
+                                        <div id="Employment" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.PROFESSION' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{borrowerModel.userDetails.Profession}}
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.EDUCATION_STATUS' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{borrowerModel.userDetails.EducationStatus}}
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.EMPLOYMENT_STATUS' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{borrowerModel.userDetails.EmploymentStatus}}
+                                                    </div>
+                                                </div>
+
+                                                <h1 class="panel-title">{{'USER_DETAILS.INCOME_AND_ASSETS' | translate}}</h1>
+
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.TOTAL_FAMILY_INCOME' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{borrowerModel.userDetails.FamilyIncome.value  | number : fractionSize}}
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.HOUSING_OWNERSHIP' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{borrowerModel.userDetails.HouseOwnership}}
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.VEHICLE_OWNERSHIP' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{borrowerModel.userDetails.VehicleNumber.value | number : fractionSize}}
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.PERSONAL_INCOME' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{borrowerModel.userDetails.PersonalIncome.value | number : fractionSize}}
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.TOTAL_DEBTS' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{borrowerModel.userDetails.TotalDebt.value | number : fractionSize}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a ng-click="saveAccordionTabsState('Properties')" data-toggle="collapse" data-parent="#ConfigAccordion" href="#Properties">{{'USER_DETAILS.PROPERTIES' | translate}}</a>
+                                            </h4>
+                                        </div>
+                                        <div id="Properties" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.HOUSING_OWNERSHIP' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{borrowerModel.userDetails.HouseOwnership}}
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.HOUSING_VALUE' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{borrowerModel.userDetails.HousingValue.value | number : fractionSize}}
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.VEHICLE_OWNERSHIP' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{borrowerModel.userDetails.VehicleNumber.value | number : fractionSize}}
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.FINANCIAL_ASSESTS_VALUE' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{borrowerModel.userDetails.FinancialAssetsValue.value | number : fractionSize}}
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.ALIMONY_RECIEVED_SIZE' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{borrowerModel.userDetails.AlimonyReceivedSize.value | number : fractionSize}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a ng-click="saveAccordionTabsState('Liabilities')" data-toggle="collapse" data-parent="#ConfigAccordion" href="#Liabilities">{{'USER_DETAILS.LIABILITIES' | translate}}</a>
+                                            </h4>
+                                        </div>
+                                        <div id="Liabilities" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.MONTHLY_LOAN_PAYMENT_SIZE' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{borrowerModel.userDetails.MonthlyLoanPaymentsSize.value | number : fractionSize}}
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.ESTATE_LIABILITIES' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{borrowerModel.userDetails.EstateLiabilitiesSize.value | number : fractionSize}}
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.CAR_LIABILITIES' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{borrowerModel.userDetails.CarLiabilitiesSize.value | number : fractionSize}}
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.TOTAL_DEBTS' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{borrowerModel.userDetails.TotalDebt.value | number : fractionSize}}
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.ALIMONY_GIVEN_SIZE' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{borrowerModel.userDetails.AlimonyGivenSize.value | number : fractionSize}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a ng-click="saveAccordionTabsState('BankAccount')" data-toggle="collapse" data-parent="#ConfigAccordion" href="#BankAccount">{{'STEP.BANK_ACCOUNT' | translate}}</a>
+                                            </h4>
+                                        </div>
+                                        <div id="BankAccount" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.BANK_NAME' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{bankAccountModel.BankNameList}}
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.ACOOUNT' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{bankAccountModel.BankAccountNumber.value}}
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.BRUNCH' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{bankAccountModel.BankBranchName.value}}
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.CREDIT_CARD_OWNERSHIP' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{bankAccountModel.CreditCardOwnership}}
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">{{'USER_DETAILS.YEARS_IN_ACCOUNT' | translate}}</label>
+                                                    <div class="col-sm-6">
+                                                        {{bankAccountModel.YearsInAccount.value}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <back-button ng-click="historyBack()">{{'BUTTONS.BACK' | translate}}</back-button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

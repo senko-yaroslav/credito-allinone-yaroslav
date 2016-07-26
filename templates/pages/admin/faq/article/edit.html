@@ -1,0 +1,27 @@
+<div class="container create-article">
+    <div class="alert alert-success" ng-show="articleUpdated" role="alert">Article updated successfully</div>
+    <form name="articleUpdate">
+        <div class="form-group">
+            <label>כותרת</label>
+            <input type="text" class="form-control" ng-model="articleTitle" required/>
+        </div>
+        <div class="form-group">
+            <label>בחר קטגוריית אם</label>
+            <select ng-click="selectChildCategoriesById()" class="form-control" name="FAQModelCategories" id="FAQModelCategories" ng-model="FAQModelCategoriesSelected" ng-options="option.Name for option in FAQModelCategories" required></select>
+        </div>
+        <div class="form-group">
+            <label>בחור קטגורית בת</label>
+            <select class="form-control" name="FAQModelSubCategories" id="FAQModelSubCategories" ng-model="FAQModelSubCategoriesSelected" ng-options="option.Name for option in FAQModelSubCategories"></select>
+        </div>
+        <div class="form-group">
+            <label></label>
+            <textarea ckeditor="editorOptions" ng-model="articleModel"></textarea>
+        </div>
+        <div class="form-group">
+            <label>טאג</label>
+            <input type="text" class="form-control" ng-model="articleTag" required/>
+        </div>
+        <button class="btn btn-primary" ng-click="update()" ng-disabled="articleModel.length == 0 || !articleUpdate.$valid">Update</button>
+        <a class="btn btn-primary" href="#/admin/faq">בטל</a>
+    </form>
+</div>

@@ -1,0 +1,21 @@
+<div ng-controller="AdminMenuController" class="side-menu">
+    <div ng-model="menuData">
+        <ul nav-menu="active" class="accordion" id="accordion">
+            <li class="accordion-group" ng-repeat="item in menuData[currentRole]">
+                <a class="accordion-heading accordion-toggle btn btn-success"  data-toggle="{{(item.href=='') ? 'collapse' : ''}}" data-parent="{{(item.href=='') ? '#accordion' : ''}}"  href="{{(item.href=='') ? '#collapse-'+$index : item.href}}">{{item.title}}</a>
+                <ul nav-menu="active" id="collapse-{{$index}}" class="accordion-body collapse">
+                    <li ng-repeat="item in item.submenu">
+                        <a class="accordion-heading accordion-toggle btn btn-success" data-toggle="{{(item.href=='') ? 'collapse' : ''}}" data-parent="{{(item.href=='') ? '#accordion' : ''}}"  href="{{(item.href=='') ? '#collapse-sub-'+$index : item.href}}">{{item.title}}</a>
+                        <ul nav-menu="active" id="collapse-sub-{{$index}}" class="accordion-body collapse">
+                            <li ng-repeat="item in item.submenu">
+                                <a  class="btn btn-default" href="{{item.href}}" >
+                                    {{item.title}}
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>

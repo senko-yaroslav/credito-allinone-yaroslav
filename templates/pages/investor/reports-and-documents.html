@@ -1,0 +1,26 @@
+<div class="row" id="documentsAndReports">
+    <div class="col-md-3">
+        <ul class="documentsList">
+            <li ng-click="drawFile('1.bmp', 'image/bmp')" class="ng-scope">
+                <a href="" class="">הוראה לחיוב חשבון</a>
+            </li>
+            <li ng-click="drawFile('2.pdf', 'application/pdf')" class="ng-scope">
+                <a href="" class="">הסכם</a>
+            </li>
+            <li ng-click="drawFile('4.jpg', 'image/jpeg')" class="ng-scope">
+                <a href="" class="">שטר חוב</a>
+            </li>
+            <li ng-click="drawFile('7.pdf', 'application/pdf')" class="ng-scope">
+                <a href="" class="">תקנון</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-9">
+        <div class="row preview" style="min-height: 400px;">
+            <span class="text" ng-hide="fileURL">תצוגה מקדימה של המסמך</span>
+
+            <iframe id="pdfRow" style="width: 100%; height:700px; overflow:hidden;" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+            <img id="imgRow" alt=""/>
+        </div>
+    </div>
+</div>

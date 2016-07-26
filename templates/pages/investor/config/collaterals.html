@@ -1,0 +1,52 @@
+<div class="alert alert-success" ng-show="savedSuccess" role="alert">{{'CONFIG_PAGE.CONFIG_SAVED_SUCCESSFULLY' | translate}}</div>
+<div class="panel-group" id="ConfigAccordion">
+    <div class="panel panel-default" ng-repeat="c in collateralsConfigModel">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#ConfigAccordion" href="#{{c.collateralType}}">{{'COLLATERALS_CONFIG_TITLES.' + c.collateralType | translate}}</a>
+            </h4>
+        </div>
+        <div id="{{c.collateralType}}" class="panel-collapse collapse " ng-class="{'in' : $index == 0}">
+            <div class="panel-body">
+
+                <div class="panel-group" id="ConfigAccordionTypes_{{c.collateralType}}">
+                    <div class="panel panel-default" ng-repeat="type in c.subCategories">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#ConfigAccordionTypes_{{c.collateralType}}" href="#{{c.collateralType + type.subCategoryName}}">{{'SELECT_OPTIONS.' + type.subCategoryName +'_'+ c.collateralType | translate}}</a>
+                            </h4>
+                        </div>
+                        <div id="{{c.collateralType + type.subCategoryName}}" class="panel-collapse collapse " ng-class="{'in' : $index == 0}">
+                            <div class="panel-body">
+                                <table  class="table table-striped table-center table-hover collaterals-table" style="max-width: none;">
+                                    <thead>
+                                    <tr>
+                                        <th>% גובה הלוואה מקסימלי</th>
+                                        <th>% גובה הלוואה מינימלי</th>
+                                        <th>גובה הלוואה מקסימלי</th>
+                                        <th>גובה הלוואה מינימלי</th>
+                                        <th>מס' חודשים מקסימלי</th>
+                                        <th>סוג ריבית</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr ng-repeat="value in type.values">
+                                        <td><input class="form-control" type="text" ng-model="value.maxLoanAmountInPercent" comma-separated-numbers/></td>
+                                        <td><input class="form-control" type="text" ng-model="value.minLoanAmountInPercent" comma-separated-numbers/></td>
+                                        <td><input class="form-control" type="text" ng-model="value.maxLoanAmount" comma-separated-numbers/></td>
+                                        <td><input class="form-control" type="text" ng-model="value.minLoanAmount" comma-separated-numbers/></td>
+                                        <td><input class="form-control" type="text" ng-model="value.maxLoanDurationMonths" comma-separated-numbers/></td>
+                                        <td>{{'SELECT_OPTIONS.' + value.loanType | translate}}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <button class="btn btn-primary">בטל</button>
+                                <button class="btn btn-primary" ng-click="collateralConfigSubmit(--$parent.$index, --$index)">שמור</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

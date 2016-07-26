@@ -1,0 +1,15 @@
+<div class="container create-category">
+    <div class="alert alert-success" ng-show="categoryUpdated" role="alert">Category updated successfully</div>
+    <form>
+        <div class="form-group">
+            <label>בחר קטגוריית אם</label>
+            <select class="form-control" name="FAQModelCategories" id="FAQModelCategories" ng-model="FAQModelCategoriesSelected" ng-options="option.Name for option in FAQModelCategories"></select>
+        </div>
+        <div class="form-group">
+            <label>Category Name</label>
+            <input class="form-control" type="text" ng-model="categoryName"/>
+        </div>
+        <button class="btn btn-primary" ng-click="updateCategory()" ng-disabled="categoryName.length == 0">Update</button>
+        <a class="btn btn-primary" href="#/admin/faq">בטל</a>
+    </form>
+</div>

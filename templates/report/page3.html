@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Report Charts</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script type="text/javascript" src="js/i18n.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
+    <script type="text/javascript" src="js/page3.js"></script>
+    <script type="text/javascript" src="vendor/highcharts/highcharts.js"></script>
+    <script type="text/javascript" src="vendor/highcharts/highcharts-more.js"></script>
+
+</head>
+<body>
+<div class="wrap">
+    <div class="header">
+        <img src="img/logo.png" alt="" title=""/>
+    </div>
+
+    <div class="row page-2-header" ><h1>תמחור הלוואה</h1></div>
+    <div class="content container page-2">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>וכיסוי (LTV) יחסי מינוף</h2>
+            </div>
+            <div class="col-md-6">
+                <h2>מבנה ההלוואה המבוקשת</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <table class="table table-striped table-bordered" cellspacing="0" width="80%">
+                    <tbody>
+                    <tr>
+                        <td id="originalLTV"></td>
+                        <td>שיעור המימון המקורי</td>
+                    </tr>
+                    <tr>
+                        <td id="weightedLTV"></td>
+                        <td>שיעור המימון המשוקלל</td>
+                    </tr>
+                    <tr>
+                        <td id="netFamilyIncome"></td>
+                        <td>הכנסה נטו חודשית משפחתית</td>
+                    </tr>
+                    <tr>
+                        <td id="reduceRateNetIncome"></td>
+                        <td>שיעור הפחתה של ההכנסה נטו</td>
+                    </tr>
+                    <tr>
+                        <td id="weightedFamilyYearlyIncomeRate"></td>
+                        <td>הכנסה משפחתית שנתית משוקללת</td>
+                    </tr>
+                    <tr>
+                        <td id="debtToYearlyIncomeRate"></td>
+                        <td>יחס חוב להכנסה שנתית</td>
+                    </tr>
+                    <tr>
+                        <td id="weightedDebtToYearlyIncomeRate"><h2></h2></td>
+                        <td>יחס חוב להכנסה שנתית משוקלל</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-6">
+                <table class="table table-striped table-bordered" cellspacing="0" width="80%">
+                    <tbody>
+                    <tr>
+                        <td id="lounSum"></td>
+                        <td>סכום מבוקש בש"ח</td>
+                    </tr>
+                    <tr>
+                        <td id="lounLength"></td>
+                        <td>תקופת הלוואה בחודשים</td>
+                    </tr>
+                    <tr>
+                        <td id="lounType"></td>
+                        <td>סוג הלוואה</td>
+                    </tr>
+                    <tr>
+                        <td id="linked">לא צמוד</td>
+                        <td>הצמדה</td>
+                    </tr>
+                    <tr>
+                        <td id="interestType">משתנה</td>
+                        <td>סוג ריבית</td>
+                    </tr>
+                    <tr>
+                        <td id="baseInterest">פריים</td>
+                        <td>סוג ריבית עוגן משתנה</td>
+                    </tr>
+                    <tr>
+                        <td id="riskFreeInterest">0.1%</td>
+                        <td>ריבית חסרת סיכון</td>
+                    </tr>
+                    <tr>
+                        <td id="theoreticalSpitzerPayment"></td>
+                        <td>תשלום שפיצר תאורטי</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <table class="table table-striped table-bordered interest">
+                <tr>
+                    <td class="col-md-6">
+                        <h4 id="interest"></h4>
+                    </td>
+                    <td class="col-md-6">
+                        <h4>:מרווח אשראי מומלץ</h4>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div id="container" style="width: 100%; height: 500px; margin: 0 auto"></div>
+            </div>
+            <div class="col-md-6">
+                <table id="report" class="table table-striped table-bordered page-3" cellspacing="0" width="80%">
+                    <thead>
+                    <tr>
+                        <th class="active center">ריבית</th>
+                        <th class="success center">LTV</th>
+                        <th class="info center">סכום הלוואה</th>
+                    </tr>
+                    </thead>
+                    <tbody class="chart-table"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <span class="credito">קרדיטו</span><span>טל': 077-7313333 | פקס: 077-8013232 | www.credito.co.il</span>
+    </div>
+</div>
+</body>
+</html>

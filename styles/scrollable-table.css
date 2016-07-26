@@ -1,0 +1,41 @@
+table.scroll {
+  width: 100%;
+  border-spacing: 0;
+  margin-top: -27px; }
+  table.scroll th,
+  table.scroll td,
+  table.scroll tr,
+  table.scroll thead,
+  table.scroll tbody {
+    display: block; }
+  table.scroll thead tr {
+    /* fallback */
+    width: 97%;
+    /* minus scroll bar width */
+    width: -webkit-calc(100% - 16px);
+    width: -moz-calc(100% - 16px);
+    width: calc(100% - 16px); }
+  table.scroll tr {
+    margin-left: 15px; }
+  table.scroll tr:first-child td {
+    border: 0px solid; }
+  table.scroll tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both; }
+  table.scroll tbody {
+    height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden; }
+    table.scroll tbody td {
+      direction: ltr;
+      text-align: right; }
+  table.scroll tbody td,
+  table.scroll thead th {
+    width: 33%;
+    float: left; }
+  table.scroll thead tr th {
+    /*text-align: left;*/ }
+
+/*# sourceMappingURL=scrollable-table.css.map */

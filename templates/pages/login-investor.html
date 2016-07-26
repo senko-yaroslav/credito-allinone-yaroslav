@@ -1,0 +1,41 @@
+<div id="login" class="container login form-horizontal"> <!--registration-->
+  <p class="bg-danger" ng-show="login.password.$error.incorrect">{{'ERRORS.WRONG_CREDENTIALS' | translate}}</p>
+  <form name="login">
+
+    <div class="form-group" ng-class="{'has-error' : login.password.$error.incorrect}">
+      <label for="email" class="col-md-3 col-sm-3 col-xs-2 control-label ng-cloak email">{{'REGISTRATION.ID' |
+        translate}}</label>
+      <div class="col-md-9 col-sm-9 col-xs-9 login-input-container">
+        <input type="text" class="form-control email-main" name="email" id="email" maxlength="30"
+               placeholder="{{'LOGIN.USERNAME' | translate}}" ng-model='loginModel.userDetails.email' check-email required />
+        <span class="help-block" ng-show="login.email.$error.checkEmail">{{'ERRORS.REGISTRATION.EMPTY_USERNAME' | translate}}</span>
+      </div>
+    </div>
+
+    <div class="form-group" ng-class="{'has-error' : login.password.$error.incorrect}">
+      <label for="password" class="col-md-3 col-sm-3 col-xs-2 control-label ng-cloak password">{{'REGISTRATION.PASSWORD' |
+        translate}}</label>
+      <div class="col-md-9 col-sm-9 col-xs-9 password-input-container">
+        <input type="password" class="form-control password-main" id="password" name="password"
+               maxlength="30" placeholder="{{'REGISTRATION.PASSWORD' | translate}}"
+               ng-model='loginModel.userDetails.pass' required />
+      </div>
+    </div>
+
+
+    <div class="form-group" ng-class="{'has-error' : login.otpPassword.$error.incorrect}" ng-show="isOTPRequired">
+      <label for="password" class="col-md-3 col-sm-3 col-xs-2 control-label ng-cloak otp">{{'REGISTRATION.OTP_PASSWORD' | translate}}</label>
+      <div class="col-md-9 col-sm-9 col-xs-9 password-input-container">
+        <input type="password" class="form-control password-main otp-password" id="OTPpassword" name="OTPpassword" maxlength="30" placeholder="{{'REGISTRATION.OTP_PASSWORD' | translate}}" ng-model='OTPPassword' />
+      </div>
+    </div>
+
+    <div class="register-btn"> <!--register button-->
+      <button class="btn btn-icon btn-login btn-primary ng-cloak" type="submit" id="loginSubmit"
+              ng-disabled="!login.$valid" ng-click="loginSubmit()">{{'BUTTONS.LOGIN' | translate}}</button>
+      <a href="#/password/reset" class="terms btn btn-primary ng-cloak">{{'LOGIN.FORGOT_PASSWORD' | translate}}</a>
+      <a href="#/register" class="btn btn-icon btn-registr btn-primary ng-cloak" >{{'LOGIN.REGISTRATION' | translate}}</a>
+    </div> <!--end register button-->
+
+  </form>
+</div> <!--end registration-->

@@ -1,0 +1,79 @@
+.header {
+    border-bottom: 3px solid #ccc;
+    padding: 10px;
+}
+
+.header img {
+    width: 140px;
+    height: 80px;
+}
+
+.content{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+.content .big-logo {
+    margin: 100px 0;
+    text-align: center;
+}
+.content .big-logo img {
+    width: 85%;
+    /*height: 462px;*/
+}
+
+.content h1 {
+    color: rgb(0, 27, 70);
+    margin: 100px 0 60px 0;
+    direction: rtl;
+}
+
+.footer {
+    text-align: right;
+    padding: 23px;
+    direction: rtl;
+}
+.footer .credito {
+    margin: 0  0 0 50px;
+    font-weight: bold;
+}
+
+#report {
+    width: 80%;
+    margin: 20px auto;
+    font-size: 80%;
+}
+
+.page-2 {
+    width: 90%;
+    margin: 0 auto;
+    -webkit-border-radius: 0 0 30px 30px;
+    -moz-border-radius: 0 0 30px 30px;
+    border-radius: 0 0 30px 30px;
+    background: #e6e6e6;
+    padding: 25px;
+}
+.page-2-header {
+    width: 90%;
+    height: 100px;
+    margin: 20px auto 0 auto !important;
+    -webkit-border-radius: 30px 30px 0 0;
+    -moz-border-radius: 30px 30px 0 0;
+    border-radius: 30px 30px 0 0;
+    background: #23527c;
+    text-align: center;
+}
+.page-2-header h1 {
+    color: #fff;
+    line-height: 64%;
+    font-size: 62pt;
+}
+.row {
+    margin: 0;
+}
+.table.page-3 {
+    margin: 0;
+}
+.center {
+  text-align: center;
+}

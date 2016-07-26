@@ -1,0 +1,58 @@
+<div class="container" id="changeStatusForm">
+  <div class="row title">
+    <h3>שינוי סטטוס</h3>
+  </div>
+  <div class="row">
+    <div class="alert alert-success" ng-show="showSuccessMessage" role="alert">סטטוס השתנה בהצלחה</div>
+    <form name="change_status" class="form-horizontal change-status">
+      <div class="centered">
+        <div class="form-group">
+          <label class="col-sm-6 control-label">{{'CALCULATION.ID' | translate}}</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" ng-model="borrower.userName" disabled />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-6 control-label">{{'USER_DETAILS.FIRST_NAME' | translate}}</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" ng-model="borrower.firstName" disabled />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-6 control-label">{{'USER_DETAILS.LAST_NAME' | translate}}</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" ng-model="borrower.lastName" disabled />
+          </div>
+        </div>
+
+        <div class="form-group"  ng-hide="borrower.status == 'NotRelevant' || borrower.status == 'LoanCompleted'">
+          <label class="col-sm-6 control-label">שינוי סטטוס</label>
+          <div class="col-sm-6">
+            <select name="changeStatus" id="" class="form-control" ng-model="statusModel" ng-options="s.value as s.name for s in statuses"></select>
+          </div>
+        </div>
+
+        <div class="form-group" ng-show="borrower.status == 'NotRelevant' || borrower.status == 'LoanCompleted'">
+          <label class="col-sm-6 control-label">שינוי סטטוס</label>
+          <div class="col-sm-6">
+            <button class="btn btn-warning back-to-previous"
+                    ng-show="borrower.status == 'NotRelevant' || borrower.status == 'LoanCompleted'"
+                    ng-click="changeStatus(true)">חזרה לקודם</button>
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-right: 12px;">
+          <div class="col-sm-6 control-label"></div>
+          <div class="change-status-buttons">
+            <button type="submit" class="btn btn-primary" ng-disabled="statusModel == '' " ng-click="changeStatus(false)">{{'BUTTONS.CHANGE' | translate}}</button>
+            <button type="button" class="btn btn-primary" ng-click="backToBT()">{{'BUTTONS.BACK' | translate}}</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
