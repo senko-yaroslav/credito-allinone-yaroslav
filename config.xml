@@ -12,6 +12,8 @@
     <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="true" />
 
+    <preference name="websecurity" value="disable" />
+
     <preference name="webviewbounce" value="true" />
     <preference name="prerendered-icon" value="true" />
     <preference name="stay-in-webview" value="false" />
@@ -64,7 +66,14 @@
     <gap:splash gap:platform="ios" height="1024" src="res/screen/ios/screen-ipad-portrait.png" width="768" />
     <gap:splash gap:platform="ios" height="768" src="res/screen/ios/screen-ipad-landscape.png" width="1024" />
 
-    <allow-navigation href="https://credito.igniteoutsourcing.com/allinone/api/*" />
+
+    <access origin="https://credito.igniteoutsourcing.com" />
+
+    <!-- Enable requests to content: URLs -->
+    <access origin="content:///*" />
+
+    <!-- Don't block any requests -->
+    <access origin="*" subdomains="true" />
 
     <platform name="android">
         <icon src="res/icon/android/icon-ldpi.png" density="ldpi" />
@@ -72,5 +81,9 @@
         <icon src="res/icon/android/icon-hdpi.png" density="hdpi" />
         <icon src="res/icon/android/icon-xhdpi.png" density="xhdpi" />
     </platform>
-    
+
+    <platform name="firefoxos">
+        <permission name="systemXHR" privileged="true" description="load data from server" />
+    </platform>
+
 </widget>
