@@ -3,7 +3,7 @@ var LS = JSON.parse(localStorage.getItem('AllInOne')) || {};
 
 
 $.ajax({
-  url: 'https://www.google.com.ua/?gfe_rd=cr&ei=eZuYV6iVKqOt8wellYHQDg',
+  url: 'https://credito.igniteoutsourcing.com/allinone/assets/img/temp-logo.png',
   type: "GET",
   success: function(response){
     alert('response ok' + response);
