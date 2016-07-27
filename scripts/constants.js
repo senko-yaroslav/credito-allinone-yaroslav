@@ -3,7 +3,7 @@
 var constants = angular.module('constants', []);
 
 constants.constant('CONFIG', {
-  "API_URL" : "https://credito.igniteoutsourcing.com/allinone/api",
+  "API_URL" : "https://www.credito.co.il/api/",
   "SITE_URL" : "https://credito.igniteoutsourcing.com/allinone",
   "MAX_CHILDREN_NUMBER": "20",
   "MAX_LOAN_NUMBER": "84",
