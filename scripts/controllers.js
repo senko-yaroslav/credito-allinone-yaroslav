@@ -486,6 +486,8 @@ creditoControllers.controller('RegisterController', ['$scope', '$rootScope', '$r
 
 creditoControllers.controller('LoginController', ['$rootScope', '$scope', '$location', '$http', '$timeout', 'Restangular', 'md5', 'LoginService', 'DecodeToken', 'UserDetails',
     function ($rootScope, $scope, $location, $http, $timeout, Restangular, md5, LoginService, DecodeToken, UserDetails) {
+        console.log('login controller');
+
         LS.firstEnterFlag = 0;
         LS.finishLoanFlag = 0;
         LS.earlyPaymentFlag = 0;
@@ -599,6 +601,8 @@ creditoControllers.controller('LoginController', ['$rootScope', '$scope', '$loca
 
 creditoControllers.controller('GetLoanController', ['$rootScope', '$scope', '$location', '$window', '$timeout', 'GetLoanService', 'Restangular', '$filter','CONFIG', 'currentStep',
     function ($rootScope, $scope, $location, $window, $timeout, GetLoanService, Restangular, $filter, CONFIG, currentStep) {
+
+
         var loanDetailsContainer = $('#loanSetup');
         $scope.loanStatus = "";
         $scope.firstEnterFlag = LS.firstEnterFlag;

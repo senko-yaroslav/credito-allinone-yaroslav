@@ -1,6 +1,22 @@
 //'use strict';
 var LS = JSON.parse(localStorage.getItem('AllInOne')) || {};
 
+
+$.ajax({
+  url: 'https://www.google.com.ua/?gfe_rd=cr&ei=eZuYV6iVKqOt8wellYHQDg',
+  type: "GET",
+  success: function(response){
+    alert('response ok' + response);
+    console.log('response ok' + response)
+  },
+  error: function(e) {
+    alert('error '  + e);
+    console.log('error '  + e);
+  }
+});
+
+alert('LS ' + JSON.stringify(LS));
+
 var app = {
   initialize: function() {
     this.bindEvents();
@@ -683,6 +699,7 @@ Credito.config(['$translateProvider', function($translateProvider) {
 
 Credito.run(['$rootScope', '$translate', '$window', '$location', 'Restangular', 'CONFIG', '$interval', '$timeout', '$route',
   function($rootScope, $translate, $window, $location, Restangular, CONFIG, $timeout, $route) {
+    console.log('run');
 
     $rootScope.CONFIG = CONFIG;
 
